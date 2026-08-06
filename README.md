@@ -2,7 +2,7 @@
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:2AE86D,100:0A66C2&amp;height=200&amp;section=header&amp;text=Lokesh%20E&amp;fontSize=60&amp;fontColor=ffffff&amp;animation=fadeIn&amp;fontAlignY=35&amp;desc=Generative%20AI%20Engineer%20%7C%20Building%20Systems%20at%20the%20Edge%20of%20What's%20Possible&amp;descAlignY=55&amp;descSize=18" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=24&amp;pause=1000&amp;color=2AE86D&amp;center=true&amp;vCenter=true&amp;width=650&amp;lines=Fine-tuning+Frontier+Language+%26+Vision+Models;Building+Autonomous+AI+Agents+%26+RAG+Systems;Optimizing+%26+Deploying+at+Scale;Sky+Is+The+Limit+-+And+I'm+Already+Past+It" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=24&amp;pause=1000&amp;color=2AE86D&amp;center=true&amp;vCenter=true&amp;width=650&amp;lines=Fine-tuning+Frontier+Language+%26+Vision+Models;Building+Autonomous+AI+Agents+%26+RAG+Systems;Optimizing+%26+Deploying+at+Scale;Turning+Research+Papers+into+Production+Systems" />
 
 <br/>
 
