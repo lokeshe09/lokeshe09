@@ -80,23 +80,17 @@ Scalable Inference Infra
 
 <div align="center">
 
-`Python`
-<img src="https://progress-bar.dev/95/?title=&width=500&color=2AE86D"/>
+![Python](https://img.shields.io/badge/Python-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91_95%25-2AE86D?style=for-the-badge&labelColor=1a1a1a)
 
-`PyTorch / TensorFlow`
-<img src="https://progress-bar.dev/90/?title=&width=500&color=EE4C2C"/>
+![PyTorch/TensorFlow](https://img.shields.io/badge/PyTorch_%2F_TensorFlow-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91_90%25-EE4C2C?style=for-the-badge&labelColor=1a1a1a)
 
-`LLM Fine-tuning & RAG`
-<img src="https://progress-bar.dev/90/?title=&width=500&color=FFD21E"/>
+![LLM Fine-tuning & RAG](https://img.shields.io/badge/LLM_Fine--tuning_%26_RAG-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91_90%25-FFD21E?style=for-the-badge&labelColor=1a1a1a)
 
-`Computer Vision`
-<img src="https://progress-bar.dev/85/?title=&width=500&color=0A66C2"/>
+![Computer Vision](https://img.shields.io/badge/Computer_Vision-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91%E2%96%91_85%25-0A66C2?style=for-the-badge&labelColor=1a1a1a)
 
-`Model Quantization & Deployment`
-<img src="https://progress-bar.dev/80/?title=&width=500&color=9B59B6"/>
+![Model Quantization & Deployment](https://img.shields.io/badge/Model_Quantization_%26_Deployment-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91%E2%96%91_80%25-9B59B6?style=for-the-badge&labelColor=1a1a1a)
 
-`SQL / Databases`
-<img src="https://progress-bar.dev/75/?title=&width=500&color=316192"/>
+![SQL/Databases](https://img.shields.io/badge/SQL_%2F_Databases-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91%E2%96%91%E2%96%91_75%25-316192?style=for-the-badge&labelColor=1a1a1a)
 
 </div>
 
@@ -139,22 +133,6 @@ Scalable Inference Infra
 <img width="100%" src="https://streak-stats.demolab.com/?user=lokeshe09&theme=radical&hide_border=true"/>
 
 <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&theme=react-dark&hide_border=true"/>
-</div>
-
-<br/>
-
-## 🐍 Contribution Snake
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/github-contribution-grid-snake.svg" alt="snake animation" width="100%"/>
-</div>
-
-<br/>
-
-## 🏆 GitHub Trophies
-
-<div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=lokeshe09&theme=radical&no-frame=true&row=1&margin-w=15&column=7"/>
 </div>
 
 <br/>
