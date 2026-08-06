@@ -1,12 +1,13 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:2AE86D,100:0A66C2&height=200&section=header&text=Lokesh%20E&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Generative%20AI%20Engineer%20%7C%20LLM%20%26%20VLM%20Fine-tuning%20%7C%20Computer%20Vision&descAlignY=55&descSize=18" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:2AE86D,100:0A66C2&amp;height=200&amp;section=header&amp;text=Lokesh%20E&amp;fontSize=60&amp;fontColor=ffffff&amp;animation=fadeIn&amp;fontAlignY=35&amp;desc=Generative%20AI%20Engineer%20%7C%20Building%20Systems%20at%20the%20Edge%20of%20What's%20Possible&amp;descAlignY=55&amp;descSize=18" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=2AE86D&center=true&vCenter=true&width=650&lines=Fine-tuning+LLMs+%26+VLMs+at+Scale;Building+RAG+Pipelines+%26+AI+Agents;Quantizing+%26+Deploying+with+vLLM;Turning+Research+Papers+into+Production" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=24&amp;pause=1000&amp;color=2AE86D&amp;center=true&amp;vCenter=true&amp;width=650&amp;lines=Fine-tuning+Frontier+Language+%26+Vision+Models;Building+Autonomous+AI+Agents+%26+RAG+Systems;Optimizing+%26+Deploying+at+Scale;Sky+Is+The+Limit+-+And+I'm+Already+Past+It" />
 
 <br/>
 
 <a href="https://www.linkedin.com/in/lokesh-e-60a583201" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="https://huggingface.co/lokeshe09" target="_blank"><img src="https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge"/></a>
 <a href="mailto:lokeshe0912@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 <a href="https://lokeshe-09.github.io/" target="_blank"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a>
 <a href="https://aicraftalchemy.github.io/" target="_blank"><img src="https://img.shields.io/badge/AI_Craft_Alchemy-0A66C2?style=for-the-badge&logo=googlechrome&logoColor=white"/></a>
@@ -17,13 +18,14 @@
 
 <br/>
 
-## 🚀 About Me
+## 🌌 About Me
 
 ```yaml
-current_focus:    "Fine-tuning & deploying LLMs / VLMs (Gemma, Qwen3 MoE)"
+current_focus:    "Fine-tuning & deploying large language and vision-language models at scale"
 collaborating_on: "Open-source LLM/VLM projects — fine-tuning, quantization, efficient inference"
-learning:         "Quantization techniques & scalable deployment of MoE architectures"
-ask_me_about:     ["LLMs", "RAG Systems", "AI Agents", "Computer Vision", "NLP"]
+learning:         "Advanced quantization & scalable deployment of Mixture-of-Experts architectures"
+ask_me_about:     ["LLMs", "RAG Systems", "AI Agents", "Computer Vision", "NLP", "Model Quantization"]
+philosophy:       "Every model I ship is a step closer to AI that actually understands context"
 fun_fact:         "I turn research papers into working AI agents before my coffee gets cold ☕"
 ```
 
@@ -36,19 +38,19 @@ fun_fact:         "I turn research papers into working AI agents before my coffe
 <td align="center" width="33%">
 
 ### 🤖 LLM Engineering
-Fine-tuning, RAG systems, AI agent design, prompt engineering, model quantization & optimized deployment
+Fine-tuning, RAG pipelines, autonomous AI agents, prompt engineering, quantization & optimized inference
 
 </td>
 <td align="center" width="33%">
 
 ### 👁️ Computer Vision
-Image classification, action detection, deep learning pipelines with EfficientNet & CNN architectures
+Image classification, action detection, deep learning pipelines with modern CNN/EfficientNet architectures
 
 </td>
 <td align="center" width="33%">
 
 ### ⚙️ MLOps & Deployment
-vLLM serving, Flask APIs, cross-GPU accuracy validation, scalable inference pipelines
+High-throughput model serving, cross-GPU validation, scalable inference infrastructure
 
 </td>
 </tr>
@@ -107,8 +109,8 @@ vLLM serving, Flask APIs, cross-GPU accuracy validation, scalable inference pipe
 
 <div align="center">
 
-### 💭 "Every model I fine-tune is a step closer to AI that actually understands context."
+### 🚀 "Sky is the limit — and I'm already building past it."
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A66C2,100:2AE86D&height=100&section=footer"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:0A66C2,100:2AE86D&amp;height=100&amp;section=footer"/>
 
 </div>
