@@ -127,12 +127,30 @@ Scalable Inference Infra
 ## 📊 GitHub Analytics
 
 <div align="center">
-<img width="49%" src="https://github-readme-stats.shion.dev/api?username=lokeshe09&theme=radical&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github"/>
-<img width="49%" src="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&theme=radical&hide_border=true&layout=compact&langs_count=8"/>
 
-<img width="100%" src="https://streak-stats.demolab.com/?user=lokeshe09&theme=radical&hide_border=true"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=lokeshe09&theme=radical&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api?username=lokeshe09&theme=default&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github">
+  <img width="49%" src="https://github-readme-stats.shion.dev/api?username=lokeshe09&theme=radical&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github" alt="GitHub Stats"/>
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&theme=radical&hide_border=true&layout=compact&langs_count=8">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&theme=default&hide_border=true&layout=compact&langs_count=8">
+  <img width="49%" src="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&theme=radical&hide_border=true&layout=compact&langs_count=8" alt="Top Languages"/>
+</picture>
 
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&theme=react-dark&hide_border=true"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=lokeshe09&theme=radical&hide_border=true">
+  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=lokeshe09&theme=default&hide_border=true">
+  <img width="100%" src="https://streak-stats.demolab.com/?user=lokeshe09&theme=radical&hide_border=true" alt="GitHub Streak"/>
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&theme=react-dark&hide_border=true">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&theme=minimal&hide_border=true">
+  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&theme=react-dark&hide_border=true" alt="Activity Graph"/>
+</picture>
+
 </div>
 
 <br/>
