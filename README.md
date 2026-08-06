@@ -82,15 +82,15 @@ Scalable Inference Infra
 
 ![Python](https://img.shields.io/badge/Python-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91_95%25-2AE86D?style=for-the-badge&labelColor=1a1a1a)
 
-![PyTorch/TensorFlow](https://img.shields.io/badge/PyTorch_%2F_TensorFlow-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91_90%25-EE4C2C?style=for-the-badge&labelColor=1a1a1a)
+![PyTorch/TensorFlow](https://img.shields.io/badge/PyTorch_%2F_TensorFlow-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91_90%25-0A66C2?style=for-the-badge&labelColor=1a1a1a)
 
 ![LLM Fine-tuning & RAG](https://img.shields.io/badge/LLM_Fine--tuning_%26_RAG-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91_90%25-FFD21E?style=for-the-badge&labelColor=1a1a1a)
 
-![Computer Vision](https://img.shields.io/badge/Computer_Vision-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91%E2%96%91_85%25-0A66C2?style=for-the-badge&labelColor=1a1a1a)
+![Computer Vision](https://img.shields.io/badge/Computer_Vision-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91%E2%96%91_85%25-2AE86D?style=for-the-badge&labelColor=1a1a1a)
 
-![Model Quantization & Deployment](https://img.shields.io/badge/Model_Quantization_%26_Deployment-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91%E2%96%91_80%25-9B59B6?style=for-the-badge&labelColor=1a1a1a)
+![Model Quantization & Deployment](https://img.shields.io/badge/Model_Quantization_%26_Deployment-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91%E2%96%91_80%25-0A66C2?style=for-the-badge&labelColor=1a1a1a)
 
-![SQL/Databases](https://img.shields.io/badge/SQL_%2F_Databases-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91%E2%96%91%E2%96%91_75%25-316192?style=for-the-badge&labelColor=1a1a1a)
+![SQL/Databases](https://img.shields.io/badge/SQL_%2F_Databases-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91%E2%96%91%E2%96%91_75%25-FFD21E?style=for-the-badge&labelColor=1a1a1a)
 
 </div>
 
@@ -129,26 +129,26 @@ Scalable Inference Infra
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=lokeshe09&theme=radical&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api?username=lokeshe09&theme=default&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github">
-  <img width="49%" src="https://github-readme-stats.shion.dev/api?username=lokeshe09&theme=radical&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github" alt="GitHub Stats"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=lokeshe09&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github&bg_color=0d1117&title_color=2AE86D&icon_color=2AE86D&text_color=c9d1d9&border_color=2AE86D">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api?username=lokeshe09&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github&bg_color=ffffff&title_color=0A66C2&icon_color=2AE86D&text_color=24292f&border_color=0A66C2">
+  <img width="49%" src="https://github-readme-stats.shion.dev/api?username=lokeshe09&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github&bg_color=0d1117&title_color=2AE86D&icon_color=2AE86D&text_color=c9d1d9&border_color=2AE86D" alt="GitHub Stats"/>
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&theme=radical&hide_border=true&layout=compact&langs_count=8">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&theme=default&hide_border=true&layout=compact&langs_count=8">
-  <img width="49%" src="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&theme=radical&hide_border=true&layout=compact&langs_count=8" alt="Top Languages"/>
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=lokeshe09&theme=radical&hide_border=true">
-  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=lokeshe09&theme=default&hide_border=true">
-  <img width="100%" src="https://streak-stats.demolab.com/?user=lokeshe09&theme=radical&hide_border=true" alt="GitHub Streak"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&hide_border=true&layout=compact&langs_count=8&bg_color=0d1117&title_color=2AE86D&text_color=c9d1d9&border_color=2AE86D">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&hide_border=true&layout=compact&langs_count=8&bg_color=ffffff&title_color=0A66C2&text_color=24292f&border_color=0A66C2">
+  <img width="49%" src="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&hide_border=true&layout=compact&langs_count=8&bg_color=0d1117&title_color=2AE86D&text_color=c9d1d9&border_color=2AE86D" alt="Top Languages"/>
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&theme=react-dark&hide_border=true">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&theme=minimal&hide_border=true">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&theme=react-dark&hide_border=true" alt="Activity Graph"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=lokeshe09&hide_border=true&background=0D1117&ring=2AE86D&fire=FFD21E&currStreakNum=FFFFFF&sideNums=c9d1d9&currStreakLabel=2AE86D&sideLabels=c9d1d9&dates=8b949e">
+  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=lokeshe09&hide_border=true&background=FFFFFF&ring=0A66C2&fire=FFD21E&currStreakNum=24292f&sideNums=24292f&currStreakLabel=0A66C2&sideLabels=24292f&dates=57606a">
+  <img width="100%" src="https://streak-stats.demolab.com/?user=lokeshe09&hide_border=true&background=0D1117&ring=2AE86D&fire=FFD21E&currStreakNum=FFFFFF&sideNums=c9d1d9&currStreakLabel=2AE86D&sideLabels=c9d1d9&dates=8b949e" alt="GitHub Streak"/>
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&hide_border=true&bg_color=0d1117&color=c9d1d9&line=2AE86D&point=FFD21E&area=true&area_color=2AE86D&title_color=2AE86D">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&hide_border=true&bg_color=ffffff&color=24292f&line=0A66C2&point=FFD21E&area=true&area_color=0A66C2&title_color=0A66C2">
+  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&hide_border=true&bg_color=0d1117&color=c9d1d9&line=2AE86D&point=FFD21E&area=true&area_color=2AE86D&title_color=2AE86D" alt="Activity Graph"/>
 </picture>
 
 </div>
