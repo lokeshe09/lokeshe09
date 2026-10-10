@@ -1,4 +1,4 @@
-name: Profile assets (streak + snake)
+name: Profile assets (stats + streak + snake)
 
 on:
   schedule:
@@ -21,21 +21,37 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install renderer deps
+        run: pip install --quiet fonttools
+
       - name: Build streak card from live contribution data
         id: streak
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
-        run: |
-          pip install --quiet fonttools
-          python tools/streak.py dist lokeshe09
+        run: python tools/streak.py dist lokeshe09
 
-      - name: Fall back to the committed streak card
-        if: steps.streak.outcome == 'failure'
+      - name: Build analytics panel from live data
+        id: stats
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+        run: python tools/stats.py dist lokeshe09
+
+      - name: Keep the committed cards if a live build failed
         run: |
           mkdir -p dist
-          cp assets/streak-dark.svg assets/streak-light.svg dist/
-          echo "::warning::Live streak build failed — published the committed fallback. Add a GH_PAT secret (read:user) if this persists."
+          [ -f dist/streak-dark.svg ] || { cp assets/streak-dark.svg assets/streak-light.svg dist/; echo "::warning::Streak build failed - kept committed card. Add a GH_PAT secret (read:user) if this persists."; }
+          [ -f dist/stats-dark.svg ]  || { cp assets/stats-dark.svg  assets/stats-light.svg  dist/; echo "::warning::Stats build failed - kept committed card."; }
+          ls -la dist
+
+      - name: Commit refreshed live cards to main (so the README never 404s)
+        run: |
+          cp dist/stats-dark.svg dist/stats-light.svg dist/streak-dark.svg dist/streak-light.svg assets/
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/stats-*.svg assets/streak-*.svg
+          git diff --cached --quiet || { git commit -m "chore: refresh live profile cards [skip ci]"; git push; }
 
       - name: Generate contribution snake
         uses: Platane/snk@v3

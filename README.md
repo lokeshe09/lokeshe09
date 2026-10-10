@@ -1,12 +1,14 @@
 <!--
-  ╔══════════════════════════════════════════════════════════════════════╗
-  ║  lokeshe09 · profile README                                          ║
-  ║  Every visual is a hand-built SVG in /assets (dark + light variants). ║
-  ║  Regenerate with the generator script — don't hand-edit the SVGs.     ║
-  ╚══════════════════════════════════════════════════════════════════════╝
+  ╔══════════════════════════════════════════════════════════════════════════╗
+  ║  lokeshe09 · profile README                                              ║
+  ║                                                                          ║
+  ║  Every visual on this page is a hand-built SVG from this repo:           ║
+  ║    assets/  — static design system (tools/generate_assets.py)            ║
+  ║    output/  — live cards rebuilt daily by .github/workflows (stats,      ║
+  ║               streak, snake). Fallback copies live in assets/.           ║
+  ║  Dark + light variants are switched with <picture> + prefers-color-scheme ║
+  ╚══════════════════════════════════════════════════════════════════════════╝
 -->
-
-<div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/hero-dark.svg">
@@ -14,14 +16,13 @@
   <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/hero-dark.svg" alt="Lokesh E — Generative AI Engineer. Fine-tuning frontier LLMs and VLMs, RAG systems, autonomous agents, deployment at scale."/>
 </picture>
 
-<br/>
+<div align="center">
 
-<a href="https://www.linkedin.com/in/lokesh-e-60a583201" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>&nbsp;
-<a href="https://huggingface.co/lokeshe09" target="_blank"><img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=0d1117" alt="Hugging Face"/></a>&nbsp;
-<a href="mailto:lokeshe0912@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>&nbsp;
-<a href="https://lokeshe-09.github.io/" target="_blank"><img src="https://img.shields.io/badge/Portfolio-0d1117?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio"/></a>&nbsp;
-<a href="https://aicraftalchemy.github.io/" target="_blank"><img src="https://img.shields.io/badge/AI_Craft_Alchemy-2AE86D?style=flat-square&logo=googlechrome&logoColor=0d1117" alt="AI Craft Alchemy"/></a>&nbsp;
-<img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Flokeshe09&label=views&labelColor=%230d1117&countColor=%232AE86D&style=flat-square&labelStyle=none" alt="Profile views"/>
+<a href="mailto:lokeshe0912@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-email-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-email-light.svg"><img height="40" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-email-dark.svg" alt="Email me"/></picture></a>&nbsp;
+<a href="https://www.linkedin.com/in/lokesh-e-60a583201" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-linkedin-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-linkedin-light.svg"><img height="40" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-linkedin-dark.svg" alt="LinkedIn"/></picture></a>&nbsp;
+<a href="https://huggingface.co/lokeshe09" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-huggingface-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-huggingface-light.svg"><img height="40" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-huggingface-dark.svg" alt="Hugging Face"/></picture></a>&nbsp;
+<a href="https://lokeshe-09.github.io/" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-portfolio-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-portfolio-light.svg"><img height="40" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-portfolio-dark.svg" alt="Portfolio"/></picture></a>&nbsp;
+<a href="https://aicraftalchemy.github.io/" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-aca-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-aca-light.svg"><img height="40" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/btn-aca-dark.svg" alt="AI Craft Alchemy"/></picture></a>
 
 </div>
 
@@ -35,33 +36,21 @@
   <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/sh-about-dark.svg" alt="01 — About me"/>
 </picture>
 
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
 <tr>
-<td width="52%" valign="top">
-
-```python
-class LokeshE:
-    role     = "Generative AI Engineer"
-    focus    = ["LLM / VLM fine-tuning", "RAG", "Agents"]
-    stack    = ["PyTorch", "Hugging Face", "LangChain"]
-    learning = ["Quantization", "MoE at scale"]
-
-    def ship(self, paper: str) -> "Production":
-        return (self.read(paper)
-                    .prototype()
-                    .optimize()
-                    .deploy())
-```
-
+<td width="50%" valign="top">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/terminal-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/terminal-light.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/terminal-dark.svg" alt="about.py — class LokeshE: role Generative AI Engineer; focus LLM/VLM fine-tuning, RAG, Agents; stack PyTorch, Hugging Face, LangChain; learning Quantization, MoE at scale"/>
+</picture>
 </td>
-<td width="48%" valign="top">
-
+<td width="50%" valign="top">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/profile-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/profile-light.svg">
   <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/profile-dark.svg" alt="Profile card — role, focus, stack, learning, ask me about"/>
 </picture>
-
 </td>
 </tr>
 </table>
@@ -146,12 +135,12 @@ class LokeshE:
   <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,opencv&theme=light">
   <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,opencv&theme=dark" alt="PyTorch, TensorFlow, scikit-learn, OpenCV"/>
 </picture>
-<br/>
-<img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=0d1117" alt="Hugging Face"/>
-<img src="https://img.shields.io/badge/Transformers-FF9D00?style=flat-square&logo=huggingface&logoColor=white" alt="Transformers"/>
-<img src="https://img.shields.io/badge/PEFT_%2F_LoRA-2AE86D?style=flat-square&logoColor=0d1117" alt="PEFT / LoRA"/>
-<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" alt="LangChain"/>
-<img src="https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=keras&logoColor=white" alt="Keras"/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-ai-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-ai-light.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-ai-dark.svg" alt="Hugging Face, Transformers, PEFT / LoRA, LangChain, Keras"/>
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-data-dark.svg">
@@ -159,10 +148,11 @@ class LokeshE:
   <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-data-dark.svg" alt="Data & numerical"/>
 </picture>
 
-<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy"/>
-<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas"/>
-<img src="https://img.shields.io/badge/SciPy-0C55A5?style=flat-square&logo=scipy&logoColor=white" alt="SciPy"/>
-<img src="https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=python&logoColor=white" alt="Matplotlib"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-data-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-data-light.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-data-dark.svg" alt="NumPy, Pandas, SciPy, Matplotlib"/>
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-backend-dark.svg">
@@ -175,8 +165,12 @@ class LokeshE:
   <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=flask,mysql,postgres,firebase,gcp,nginx,vercel,netlify&theme=light">
   <img src="https://skillicons.dev/icons?i=flask,mysql,postgres,firebase,gcp,nginx,vercel,netlify&theme=dark" alt="Flask, MySQL, PostgreSQL, Firebase, Google Cloud, Nginx, Vercel, Netlify"/>
 </picture>
-<br/>
-<img src="https://img.shields.io/badge/Gunicorn-499848?style=flat-square&logo=gunicorn&logoColor=white" alt="Gunicorn"/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-backend-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-backend-light.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-backend-dark.svg" alt="Gunicorn, REST APIs, CI / CD"/>
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-tools-dark.svg">
@@ -225,6 +219,7 @@ class LokeshE:
 <br/>
 
 <!-- ─────────────────────────── 05 · ANALYTICS ─────────────────────────── -->
+<!-- Live cards: rebuilt daily by .github/workflows/profile-assets.yml and committed back to assets/ -->
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/sh-analytics-dark.svg">
@@ -232,37 +227,27 @@ class LokeshE:
   <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/sh-analytics-dark.svg" alt="05 — GitHub analytics"/>
 </picture>
 
-<div align="center">
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=lokeshe09&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&border_radius=20&bg_color=0F1522&border_color=1F2937&title_color=F1F5F9&icon_color=2AE86D&text_color=A3B0C2&ring_color=2AE86D">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api?username=lokeshe09&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&border_radius=20&bg_color=F8FAFC&border_color=E2E8F0&title_color=0F172A&icon_color=16A34A&text_color=475569&ring_color=16A34A">
-  <img width="49%" src="https://github-readme-stats.shion.dev/api?username=lokeshe09&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&border_radius=20&bg_color=0F1522&border_color=1F2937&title_color=F1F5F9&icon_color=2AE86D&text_color=A3B0C2&ring_color=2AE86D" alt="GitHub stats"/>
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&layout=compact&langs_count=8&border_radius=20&bg_color=0F1522&border_color=1F2937&title_color=F1F5F9&text_color=A3B0C2">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&layout=compact&langs_count=8&border_radius=20&bg_color=F8FAFC&border_color=E2E8F0&title_color=0F172A&text_color=475569">
-  <img width="49%" src="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&layout=compact&langs_count=8&border_radius=20&bg_color=0F1522&border_color=1F2937&title_color=F1F5F9&text_color=A3B0C2" alt="Top languages"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stats-light.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stats-dark.svg" alt="GitHub analytics — commits, contributions, active days, public repos, pull requests, languages, and a language share bar"/>
 </picture>
 
-<br/><br/>
+<br/>
 
-<!-- Streak card: built daily from live contribution data by .github/workflows/profile-assets.yml → output branch -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/streak-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/streak-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/streak-dark.svg" alt="Contribution streak — total contributions, current streak, longest streak, and the last 26 weeks of activity"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/streak-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/streak-light.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/streak-dark.svg" alt="Contribution streak — total contributions, current streak, longest streak, and the last 26 weeks of activity"/>
 </picture>
 
-<br/><br/>
+<br/>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/github-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/github-snake.svg">
   <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/github-snake-dark.svg" alt="Contribution snake animation"/>
 </picture>
-
-</div>
 
 <br/>
 

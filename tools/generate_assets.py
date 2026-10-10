@@ -351,3 +351,84 @@ for theme, t in THEMES.items():
     footer(t, theme)
 
 print("ok:", len(os.listdir(OUT)), "files")
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 8. TERMINAL CARD (About, left column) — syntax-coloured code with a typing reveal
+# ──────────────────────────────────────────────────────────────────────────────
+CODE = [
+    [("# about.py — who I am, as code", "c")],
+    [("class ", "k"), ("LokeshE", "n"), (":", "p")],
+    [("    role     ", "p"), ("= ", "o"), ('"Generative AI Engineer"', "s")],
+    [("    focus    ", "p"), ("= ", "o"), ("[", "p"), ('"LLM/VLM fine-tuning"', "s"), (", ", "p"), ('"RAG"', "s"), (", ", "p"), ('"Agents"', "s"), ("]", "p")],
+    [("    stack    ", "p"), ("= ", "o"), ("[", "p"), ('"PyTorch"', "s"), (", ", "p"), ('"Hugging Face"', "s"), (", ", "p"), ('"LangChain"', "s"), ("]", "p")],
+    [("    learning ", "p"), ("= ", "o"), ("[", "p"), ('"Quantization"', "s"), (", ", "p"), ('"MoE at scale"', "s"), ("]", "p")],
+    [],
+    [("    def ", "k"), ("ship", "f"), ("(self, paper):", "p")],
+    [("        return ", "k"), ("self.read(paper).prototype().deploy()", "p")],
+]
+
+
+def terminal(t, theme):
+    W, H = 560, 352
+    role = {"c": t["ink3"], "k": t["accent3"], "n": t["accent4"], "s": t["accent"], "f": t["accent2"], "p": t["ink"], "o": t["ink2"]}
+    b = [card(t, W, H, 20)]
+    # window chrome
+    b.append(f'<path d="M0.5 44H{W-0.5}" stroke="{t["grid"]}"/>')
+    for i, c in enumerate(("#FF5F57", "#FEBC2E", "#28C840")):
+        b.append(f'<circle cx="{26+i*18}" cy="22" r="5" fill="{c}" opacity="0.9"/>')
+    b.append(T(MONO, "lokesh@ai ~ about.py", W / 2, 26.5, 12, t["ink3"], anchor="middle", tracking=0.02))
+    # code
+    size, lh, x0, y = 13, 22, 24, 78
+    adv = MONO.width("M", size)
+    for i, line in enumerate(CODE):
+        b.append(f'<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="{0.3+0.16*i:.2f}s" fill="freeze"/>')
+        b.append(T(MONO, f"{i+1:>2}", x0, y, 11, t["ink3"], opacity=0.7))
+        x = x0 + 30
+        for text, r in line:
+            b.append(T(MONO, text, x, y, size, role[r]))
+            x += adv * len(text)
+        if i == len(CODE) - 1:
+            b.append(f'<rect x="{x+4:.1f}" y="{y-12}" width="7" height="15" rx="1" fill="{t["accent"]}"><animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/></rect>')
+        b.append("</g>")
+        y += lh
+    # status bar
+    b.append(f'<path d="M0.5 {H-34}H{W-0.5}" stroke="{t["grid"]}"/>')
+    b.append(f'<circle cx="28" cy="{H-17}" r="3.5" fill="{t["accent"]}"/>')
+    b.append(T(MONO, "python 3.12", 40, H - 13, 11, t["ink3"], tracking=0.04))
+    b.append(T(MONO, "UTF-8  ·  LF  ·  Ln 9, Col 52", W - 24, H - 13, 11, t["ink3"], anchor="end", tracking=0.04))
+    write("terminal", theme, svg(W, H, "".join(b)))
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 9. STACK CHIP STRIPS — tools without a skillicons logo, in the same system
+# ──────────────────────────────────────────────────────────────────────────────
+CHIPS = {
+    "ai": [("Hugging Face", "#FFD21E"), ("Transformers", "#FF9D00"), ("PEFT / LoRA", "#2AE86D"), ("LangChain", "#1C3C3C"), ("Keras", "#D00000")],
+    "data": [("NumPy", "#4DABCF"), ("Pandas", "#8A4FFF"), ("SciPy", "#0C55A5"), ("Matplotlib", "#11557C")],
+    "backend": [("Gunicorn", "#499848"), ("REST APIs", "#60A5FA"), ("CI / CD", "#FBBF24")],
+}
+
+
+def chips(t, theme, key, items):
+    W, H = 1200, 44
+    size, pad, gapx = 13, 14, 10
+    widths = [MED.width(n, size) + pad * 2 + 18 for n, _ in items]
+    total = sum(widths) + gapx * (len(items) - 1)
+    x = (W - total) / 2
+    b = []
+    for (name, col), w in zip(items, widths):
+        dot = col if theme == "dark" or col.upper() not in ("#FFD21E", "#2AE86D", "#FBBF24") else t["accent4"] if col.upper() in ("#FFD21E", "#FBBF24") else t["accent"]
+        b.append(f'<rect x="{x:.1f}" y="6" width="{w:.1f}" height="32" rx="9" fill="{t["chipbg"]}" stroke="{t["border"]}"/>')
+        b.append(f'<circle cx="{x+pad+4:.1f}" cy="22" r="4" fill="{dot}"/>')
+        b.append(T(MED, name, x + pad + 18, 26.5, size, t["ink"]))
+        x += w + gapx
+    write(f"chips-{key}", theme, svg(W, H, "".join(b)))
+
+
+for theme, t in THEMES.items():
+    terminal(t, theme)
+    for key, items in CHIPS.items():
+        chips(t, theme, key, items)
+
+print("ok: terminal + chips")
