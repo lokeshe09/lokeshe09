@@ -21,7 +21,7 @@
 <a href="mailto:lokeshe0912@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>&nbsp;
 <a href="https://lokeshe-09.github.io/" target="_blank"><img src="https://img.shields.io/badge/Portfolio-0d1117?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio"/></a>&nbsp;
 <a href="https://aicraftalchemy.github.io/" target="_blank"><img src="https://img.shields.io/badge/AI_Craft_Alchemy-2AE86D?style=flat-square&logo=googlechrome&logoColor=0d1117" alt="AI Craft Alchemy"/></a>&nbsp;
-<img src="https://komarev.com/ghpvc/?username=lokeshe09&label=views&color=2AE86D&style=flat-square" alt="Profile views"/>
+<img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Flokeshe09&label=views&labelColor=%230d1117&countColor=%232AE86D&style=flat-square&labelStyle=none" alt="Profile views"/>
 
 </div>
 
@@ -251,14 +251,6 @@ class LokeshE:
   <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=lokeshe09&border_radius=20&background=0F1522&border=1F2937&ring=2AE86D&fire=2AE86D&currStreakNum=F1F5F9&sideNums=F1F5F9&currStreakLabel=2AE86D&sideLabels=A3B0C2&dates=6B7A90">
   <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=lokeshe09&border_radius=20&background=F8FAFC&border=E2E8F0&ring=16A34A&fire=16A34A&currStreakNum=0F172A&sideNums=0F172A&currStreakLabel=16A34A&sideLabels=475569&dates=64748B">
   <img width="100%" src="https://streak-stats.demolab.com/?user=lokeshe09&border_radius=20&background=0F1522&border=1F2937&ring=2AE86D&fire=2AE86D&currStreakNum=F1F5F9&sideNums=F1F5F9&currStreakLabel=2AE86D&sideLabels=A3B0C2&dates=6B7A90" alt="Contribution streak"/>
-</picture>
-
-<br/><br/>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&radius=20&bg_color=0F1522&color=A3B0C2&line=2AE86D&point=F1F5F9&area=true&area_color=2AE86D&title_color=F1F5F9&hide_border=true">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&radius=20&bg_color=F8FAFC&color=475569&line=16A34A&point=0F172A&area=true&area_color=16A34A&title_color=0F172A&hide_border=true">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&radius=20&bg_color=0F1522&color=A3B0C2&line=2AE86D&point=F1F5F9&area=true&area_color=2AE86D&title_color=F1F5F9&hide_border=true" alt="Contribution activity graph"/>
 </picture>
 
 <br/><br/>
