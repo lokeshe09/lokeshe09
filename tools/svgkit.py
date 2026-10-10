@@ -222,3 +222,9 @@ def keycap(t, x, y, w, h, color, uid, depth=4, rx=10, fill=None):
             f'<rect x="{x+0.5:.1f}" y="{y+0.5:.1f}" width="{w-1:.1f}" height="{h-1:.1f}" rx="{rx}" fill="{t["panel"]}"/>'
             f'<rect x="{x+0.5:.1f}" y="{y+0.5:.1f}" width="{w-1:.1f}" height="{h-1:.1f}" rx="{rx}" fill="{face}" stroke="url(#{uid}-bd)"/>'
             f'<rect x="{x+rx:.1f}" y="{y+1:.1f}" width="{w-2*rx:.1f}" height="1" fill="url(#{uid}-hl)" opacity="0.9"/>')
+
+
+def tip(text, cls="hit"):
+    """Hover metadata. Inert inside <img>; the interactive site (docs/) turns it into a tooltip."""
+    text = str(text).replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;")
+    return f' class="{cls}" data-tip="{text}"'

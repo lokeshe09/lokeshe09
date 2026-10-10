@@ -14,7 +14,7 @@ import os
 import sys
 from datetime import timedelta
 
-from svgkit import BOLD, SEMI, MED, REG, MONO, MONOB, T, THEMES, svg, write, glass_card, glass_tile, shade, fmt_int
+from svgkit import BOLD, SEMI, MED, REG, MONO, MONOB, T, THEMES, svg, write, glass_card, glass_tile, shade, fmt_int, tip
 from ghdata import calendar
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), "..", "assets")
@@ -76,6 +76,10 @@ def fmt_range(a, b):
     return f"{fmt_date(a)} → {fmt_date(b)}"
 
 
+def pl(n):
+    return "" if n == 1 else "s"
+
+
 def fade(begin, dur=0.6):
     return f'<animate attributeName="opacity" from="0" to="1" dur="{dur}s" begin="{begin:.2f}s" fill="freeze"/>'
 
@@ -104,15 +108,17 @@ def render(theme):
     b.append(f'<g opacity="0">{fade(0.2, 0.8)}')
     b.append(f'<circle cx="{cx}" cy="{cy}" r="126" fill="none" stroke="{t["grid"]}" stroke-width="1"/>')
     n = len(w52)
-    for i, (_, v) in enumerate(w52):
+    for i, (wend, v) in enumerate(w52):
         ang = math.radians(-90 + (i + 1) * 360 / n)
         r0, ln = 130, 6 + 34 * (v / max52) ** 0.7
         x0, y0 = cx + r0 * math.cos(ang), cy + r0 * math.sin(ang)
         x1, y1 = cx + (r0 + ln) * math.cos(ang), cy + (r0 + ln) * math.sin(ang)
         col = t["accent"] if i == n - 1 else (t["bar"] if v > 0 else t["ink3"])
         op = 1 if i == n - 1 else (0.35 + 0.65 * (v / max52) ** 0.5 if v > 0 else 0.25)
-        b.append(f'<path d="M{x0:.1f} {y0:.1f}L{x1:.1f} {y1:.1f}" stroke="{col}" stroke-width="3.2" stroke-linecap="round" opacity="{op:.2f}">'
-                 f'<animate attributeName="opacity" from="0" to="{op:.2f}" dur="0.4s" begin="{0.3 + i*0.02:.2f}s" fill="freeze"/></path>')
+        wk = f"Week of {fmt_date(wend - timedelta(days=6), False)} – {fmt_date(wend, False)}, {wend.year} · {v} contribution{'s' if v != 1 else ''}"
+        b.append(f'<path d="M{x0:.1f} {y0:.1f}L{x1:.1f} {y1:.1f}" stroke="{col}" stroke-width="3.2" stroke-linecap="round" opacity="{op:.2f}"{tip(wk)}>'
+                 f'<animate attributeName="opacity" from="0" to="{op:.2f}" dur="0.4s" begin="{0.3 + i*0.02:.2f}s" fill="freeze"/></path>'
+                 f'<path d="M{x0:.1f} {y0:.1f}L{x1:.1f} {y1:.1f}" stroke="transparent" stroke-width="10" stroke-linecap="round"{tip(wk)}/>')
     b.append("</g>")
     # orbiting particle on the activity ring
     b.append(f'<circle r="4" fill="{t["accent"]}"><animateMotion dur="12s" repeatCount="indefinite" path="M{cx} {cy-150} a150 150 0 1 1 -0.1 0"/></circle>')
@@ -128,7 +134,8 @@ def render(theme):
     b.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="url(#{uid}-ring)" stroke-width="{sw}" stroke-linecap="round" '
              f'stroke-dasharray="{C:.2f}" stroke-dashoffset="{C:.2f}" transform="rotate(-90 {cx} {cy})"><animate attributeName="stroke-dashoffset" from="{C:.2f}" to="{C*(1-frac):.2f}" dur="1.6s" begin="0.5s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/></circle>')
     # inner glass disc + number
-    b.append(f'<circle cx="{cx}" cy="{cy}" r="{r-14}" fill="{t["g_tile"]}" stroke="url(#{uid}-bd)"/>')
+    ring_tip = tip(f"Current streak {cur} day{pl(cur)} · {int(round(frac*100))}% of your {best}-day record")
+    b.append(f'<circle cx="{cx}" cy="{cy}" r="{r-14}" fill="{t["g_tile"]}" stroke="url(#{uid}-bd)"{ring_tip}/>')
     b.append(T(BOLD, fmt_int(cur), cx, cy + 16, 64, t["ink"], anchor="middle", tracking=-0.04))
     b.append(T(MONO, "DAY STREAK", cx, cy + 40, 11, t["ink3"], anchor="middle", tracking=0.2))
     b.append(T(MONO, "CURRENT", cx, cy - 46, 10.5, t["accent"], anchor="middle", tracking=0.24))
@@ -146,7 +153,7 @@ def render(theme):
     lx = 40
     b.append(f'<g opacity="0">{fade(0.35)}')
     b.append(T(MED, "Total contributions", lx, 112, 14, t["ink2"]))
-    b.append(T(BOLD, fmt_int(total), lx, 176, 60, t["ink"], tracking=-0.035))
+    b.append(T(BOLD, fmt_int(total), lx, 176, 60, t["ink"], tracking=-0.035, extra=tip(f"{fmt_int(total)} contributions since {fmt_date(first) if first else '—'} · {active_days} active days")))
     b.append(T(MONO, (fmt_date(first).upper() + " → PRESENT") if first else "—", lx, 200, 11.5, t["ink3"], tracking=0.06))
     # cumulative growth curve
     gx0, gx1, gy0, gy1 = lx, 380, 236, 318
@@ -157,6 +164,10 @@ def render(theme):
         b.append(f'<path d="{line}" fill="none" stroke="{t["accent"]}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>')
         ex, ey = pts[-1]
         b.append(f'<circle cx="{ex:.1f}" cy="{ey:.1f}" r="7" fill="{t["panel"]}"/><circle cx="{ex:.1f}" cy="{ey:.1f}" r="4.5" fill="{t["accent"]}"/>')
+        step = max(1, len(pts) // 60)
+        for i in range(0, len(pts), step):
+            px, py = pts[i]
+            b.append(f'<rect x="{px - (gx1-gx0)/len(pts)*step/2:.1f}" y="{gy0-6}" width="{(gx1-gx0)/len(pts)*step:.1f}" height="{gy1-gy0+12}" fill="transparent"{tip(f"{fmt_date(dates[i])} · {fmt_int(cum[i])} total contributions")}/>')
         b.append(f'<circle cx="{ex:.1f}" cy="{ey:.1f}" r="4.5" fill="none" stroke="{t["accent"]}" stroke-width="1.5"><animate attributeName="r" values="4.5;14" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="2s" repeatCount="indefinite"/></circle>')
     b.append(f'<rect x="{gx0}" y="{gy1}" width="{gx1-gx0}" height="1" fill="{t["grid"]}"/>')
     b.append(T(MONO, "CUMULATIVE GROWTH · ALL TIME", lx, 338, 10, t["ink3"], tracking=0.14))
@@ -171,7 +182,7 @@ def render(theme):
     rx = 820
     b.append(f'<g opacity="0">{fade(0.45)}')
     b.append(T(MED, "Longest streak", rx, 112, 14, t["ink2"]))
-    b.append(T(BOLD, fmt_int(best), rx, 176, 60, t["ink"], tracking=-0.035))
+    b.append(T(BOLD, fmt_int(best), rx, 176, 60, t["ink"], tracking=-0.035, extra=tip(f"Longest streak {best} days · {fmt_range(best_start, best_end)}")))
     b.append(T(MONO, fmt_range(best_start, best_end).upper(), rx, 200, 11.5, t["ink3"], tracking=0.06))
     # 90-day track: 3 rows × 30 cells, streak runs light up
     cell, gap, cols = 9, 2.6, 30
@@ -190,7 +201,9 @@ def render(theme):
         else:
             col, op = t["ink3"], 0.22
         extra = f'<animate attributeName="opacity" values="1;0.45;1" dur="1.6s" repeatCount="indefinite"/>' if dd == cur_end and cur else ""
-        b.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{cell}" height="{cell}" rx="2.5" fill="{col}" opacity="{op}">{extra}</rect>')
+        state = "current streak" if dd in in_cur else ("personal record" if dd in in_best else ("active" if v > 0 else "no activity"))
+        cell_tip = tip(f"{fmt_date(dd)} · {v} contribution{pl(v)} · {state}")
+        b.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{cell}" height="{cell}" rx="2.5" fill="{col}" opacity="{op}"{cell_tip}>{extra}</rect>')
     b.append(T(MONO, "LAST 90 DAYS", rx, 288, 10, t["ink3"], tracking=0.14))
     # legend
     lgx = rx
@@ -215,7 +228,9 @@ def render(theme):
         x = bx0 + i * slot + (slot - bw) / 2
         h = max(3, (by1 - by0) * v / mx)
         fill = t["accent"] if i == len(w26) - 1 else ("url(#" + uid + "-bar)" if v > 0 else t["grid"])
-        b.append(f'<rect x="{x:.1f}" y="{by1-h:.1f}" width="{bw:.1f}" height="{h:.1f}" rx="3" fill="{fill}">'
+        wk = f"Week of {fmt_date(end - timedelta(days=6), False)} – {fmt_date(end, False)}, {end.year} · {v} contribution{'s' if v != 1 else ''}"
+        b.append(f'<rect x="{x - (slot-bw)/2:.1f}" y="{by0-10}" width="{slot:.1f}" height="{by1-by0+12}" fill="transparent"{tip(wk)}/>')
+        b.append(f'<rect x="{x:.1f}" y="{by1-h:.1f}" width="{bw:.1f}" height="{h:.1f}" rx="3" fill="{fill}"{tip(wk)}>'
                  f'<animate attributeName="height" from="0" to="{h:.1f}" dur="0.8s" begin="{0.6 + i*0.03:.2f}s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>'
                  f'<animate attributeName="y" from="{by1}" to="{by1-h:.1f}" dur="0.8s" begin="{0.6 + i*0.03:.2f}s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/></rect>')
         if (end, v) == peak26:

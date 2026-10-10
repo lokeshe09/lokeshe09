@@ -13,7 +13,7 @@ if len(sys.argv) > 1:
 if len(sys.argv) > 2:
     os.environ["OUT_DIR"] = sys.argv[2]
 
-from svgkit import (BOLD, SEMI, MED, REG, MONO, MONOB, T, THEMES, svg, write, glass_card, glass_tile, keycap,
+from svgkit import (BOLD, SEMI, MED, REG, MONO, MONOB, T, THEMES, svg, write, glass_card, glass_tile, keycap, tip,
                     iso, iso_prism, shade, dotgrid, DEFAULT_OUT as OUT)
 
 SPLINE = 'calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"'
@@ -117,6 +117,7 @@ def hero(t, theme):
     for c in ["LLM / VLM FINE-TUNING", "AGENTIC SYSTEMS", "COMPUTER VISION", "PRODUCTION ML"]:
         cw = MONO.width(c, 11.5, 0.08) + 30
         b.append(glass_tile(t, x, 392, cw, 32, 9, uid))
+        b.append(f'<rect x="{x}" y="392" width="{cw:.0f}" height="32" rx="9" fill="transparent"{tip(c.title().replace("Llm", "LLM").replace("Vlm", "VLM").replace("Ml", "ML"))}/>')
         b.append(T(MONO, c, x + 15, 412.5, 11.5, t["ink2"], tracking=0.08))
         x += cw + 10
 
@@ -290,6 +291,7 @@ def expertise_card(t, theme, key, title, acc, icon, bullets, tags, idx):
     b.append(T(MONO, f"0{idx+1} / CAPABILITY", 92, 71, 11, t["ink3"], tracking=0.12))
     y = 116
     for line in bullets:
+        b.append(f'<rect x="24" y="{y-17}" width="{W-120}" height="26" rx="7" fill="transparent"{tip(f"{title} · {line}")}/>')
         b.append(iso_prism(34, y - 7, -3.5, -3.5, 7, 7, 5, c, shade(c, 0.75), shade(c, 0.55)))
         b.append(T(MED, line, 48, y, 15, t["ink2"]))
         y += 28
@@ -333,10 +335,11 @@ def chart(t, theme):
         y = top + i * row_h
         cy = y + bar_h / 2
         w = (x1 - x0) * val / 100
+        b.append(f'<rect x="{pad_l}" y="{y-12}" width="{x1-pad_l+60}" height="{row_h-6}" rx="8" fill="transparent"{tip(f"{name} · {val} / 100 · self-assessed")}/>')
         b.append(T(MED, name, x0 - 22, cy + 5.5, 15, t["ink"], anchor="end"))
         b.append(f'<rect x="{x0}" y="{y}" width="{x1-x0:.1f}" height="{bar_h}" rx="4" fill="{t["track"]}"/>')
         defs += f'<clipPath id="c{i}"><rect x="{x0}" y="{y-2}" width="0" height="{bar_h+4}"><animate attributeName="width" from="0" to="{w+4:.1f}" dur="1.1s" begin="{0.15+i*0.12:.2f}s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/></rect></clipPath>'
-        b.append(f'<path d="M{x0} {y}H{x0+w-4:.1f}a4 4 0 0 1 4 4v{bar_h-8}a4 4 0 0 1 -4 4H{x0}Z" fill="{t["bar"]}" clip-path="url(#c{i})"/>')
+        b.append(f'<path d="M{x0} {y}H{x0+w-4:.1f}a4 4 0 0 1 4 4v{bar_h-8}a4 4 0 0 1 -4 4H{x0}Z" fill="{t["bar"]}" clip-path="url(#c{i})"{tip(f"{name} · {val} / 100 · self-assessed")}/>')
         b.append(f'<path d="{SEMI.path(f"{val}%", x0 + w + 14, cy + 5.5, 14)}" fill="{t["ink"]}" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="{0.9+i*0.12:.2f}s" fill="freeze"/></path>')
     b.append(f'<rect x="40" y="{H-54}" width="{W-80}" height="1" fill="{t["grid"]}"/>')
     b.append(f'<rect x="40" y="{H-34}" width="14" height="6" rx="2" fill="{t["bar"]}"/>')
@@ -475,6 +478,7 @@ def stack_board(t, theme, key, idx, label, items):
             b.append(f'<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="{0.1 + n*0.05:.2f}s" fill="freeze"/>'
                      f'<animateTransform attributeName="transform" type="translate" from="0 10" to="0 0" dur="0.5s" begin="{0.1 + n*0.05:.2f}s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>')
             b.append(keycap(t, x, y, w, kh, col, uid))
+            b.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{kh+4}" rx="10" fill="transparent"{tip(f"{name} · {label.title()}", cls="hit key")}/>')
             b.append(f'<circle cx="{x+pad+2:.1f}" cy="{y+kh/2:.1f}" r="4.5" fill="{col}"/>')
             b.append(f'<circle cx="{x+pad+2:.1f}" cy="{y+kh/2:.1f}" r="7" fill="{col}" opacity="0.35"/>')
             b.append(T(MED, name, x + pad + 16, y + kh / 2 + 5, size, t["ink"]))
@@ -494,10 +498,6 @@ for theme, t in THEMES.items():
     for i, (key, title, acc, icon, bullets, tags) in enumerate(CARDS):
         expertise_card(t, theme, key, title, acc, icon, bullets, tags, i)
     chart(t, theme)
-    for key, text in STACK_LABELS:
-        stack_label(t, theme, key, text)
-    for key, items in CHIPS.items():
-        chips(t, theme, key, items)
     for key, label, primary in BUTTONS:
         button(t, theme, key, label, primary)
     footer(t, theme)

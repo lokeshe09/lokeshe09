@@ -13,7 +13,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/hero-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/hero-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/hero-dark.svg" alt="Lokesh E — Generative AI Engineer. Fine-tuning frontier LLMs and VLMs, RAG systems, autonomous agents, deployment at scale."/>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/hero-dark.svg" title="Lokesh E — Generative AI Engineer" alt="Lokesh E — Generative AI Engineer. Fine-tuning frontier LLMs and VLMs, RAG systems, autonomous agents, deployment at scale."/>
 </picture>
 
 <div align="center">
@@ -42,14 +42,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/terminal-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/terminal-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/terminal-dark.svg" alt="about.py — class LokeshE: role Generative AI Engineer; focus LLM/VLM fine-tuning, RAG, Agents; stack PyTorch, Hugging Face, LangChain; learning Quantization, MoE at scale"/>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/terminal-dark.svg" title="about.py — who I am, as code" alt="about.py — class LokeshE: role Generative AI Engineer; focus LLM/VLM fine-tuning, RAG, Agents; stack PyTorch, Hugging Face, LangChain; learning Quantization, MoE at scale"/>
 </picture>
 </td>
 <td width="50%" valign="top">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/profile-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/profile-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/profile-dark.svg" alt="Profile card — role, focus, stack, learning, ask me about"/>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/profile-dark.svg" title="Profile card" alt="Profile card — role, focus, stack, learning, ask me about"/>
 </picture>
 </td>
 </tr>
@@ -71,14 +71,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-llm-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-llm-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-llm-dark.svg" alt="LLM Engineering — supervised and instruction fine-tuning, LoRA / QLoRA, RAG pipelines, quantization"/>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-llm-dark.svg" title="LLM Engineering — fine-tuning, LoRA / QLoRA, RAG, quantization" alt="LLM Engineering — supervised and instruction fine-tuning, LoRA / QLoRA, RAG pipelines, quantization"/>
 </picture>
 </td>
 <td width="50%" valign="top">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-agents-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-agents-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-agents-dark.svg" alt="Agentic Systems — autonomous multi-step agents, tool use, planning and memory, papers to prototypes"/>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-agents-dark.svg" title="Agentic Systems — autonomous agents, tool use, planning & memory" alt="Agentic Systems — autonomous multi-step agents, tool use, planning and memory, papers to prototypes"/>
 </picture>
 </td>
 </tr>
@@ -87,14 +87,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-vision-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-vision-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-vision-dark.svg" alt="Computer Vision — image classification, action detection, CNN / EfficientNet pipelines, VLM fine-tuning"/>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-vision-dark.svg" title="Computer Vision — classification, action detection, CNNs, VLMs" alt="Computer Vision — image classification, action detection, CNN / EfficientNet pipelines, VLM fine-tuning"/>
 </picture>
 </td>
 <td width="50%" valign="top">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-mlops-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-mlops-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-mlops-dark.svg" alt="MLOps and Deployment — high-throughput serving, cross-GPU validation, scalable inference, CI/CD for ML"/>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/card-mlops-dark.svg" title="MLOps & Deployment — serving, cross-GPU validation, inference infra, CI/CD" alt="MLOps and Deployment — high-throughput serving, cross-GPU validation, scalable inference, CI/CD for ML"/>
 </picture>
 </td>
 </tr>
@@ -113,7 +113,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-languages-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-languages-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-languages-dark.svg" alt="Languages — Python, C, Java"/>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-languages-dark.svg" title="Languages — Python, C, Java" alt="Languages — Python, C, Java"/>
 </picture>
 
 <br/>
@@ -121,7 +121,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-ai-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-ai-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-ai-dark.svg" alt="AI · ML · DL — PyTorch, TensorFlow, Keras, scikit-learn, OpenCV, Hugging Face, Transformers, PEFT / LoRA, LangChain"/>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-ai-dark.svg" title="AI · ML · DL — PyTorch, TensorFlow, Keras, scikit-learn, OpenCV, Hugging Face, Transformers, PEFT / LoRA, LangChain" alt="AI · ML · DL — PyTorch, TensorFlow, Keras, scikit-learn, OpenCV, Hugging Face, Transformers, PEFT / LoRA, LangChain"/>
 </picture>
 
 <br/>
@@ -129,7 +129,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-data-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-data-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-data-dark.svg" alt="Data & numerical — NumPy, Pandas, SciPy, Matplotlib"/>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-data-dark.svg" title="Data & numerical — NumPy, Pandas, SciPy, Matplotlib" alt="Data & numerical — NumPy, Pandas, SciPy, Matplotlib"/>
 </picture>
 
 <br/>
@@ -137,7 +137,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-backend-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-backend-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-backend-dark.svg" alt="Backend · Cloud · DevOps — Flask, Gunicorn, Nginx, MySQL, PostgreSQL, Firebase, Google Cloud, Vercel, Netlify, REST APIs"/>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-backend-dark.svg" title="Backend · Cloud · DevOps — Flask, Gunicorn, Nginx, MySQL, PostgreSQL, Firebase, Google Cloud, Vercel, Netlify, REST APIs" alt="Backend · Cloud · DevOps — Flask, Gunicorn, Nginx, MySQL, PostgreSQL, Firebase, Google Cloud, Vercel, Netlify, REST APIs"/>
 </picture>
 
 <br/>
@@ -145,7 +145,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-tools-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-tools-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-tools-dark.svg" alt="Tools — Git, GitHub, GitHub Actions, CI / CD"/>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-tools-dark.svg" title="Tools — Git, GitHub, GitHub Actions, CI / CD" alt="Tools — Git, GitHub, GitHub Actions, CI / CD"/>
 </picture>
 
 <br/>
@@ -158,11 +158,11 @@
   <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/sh-proficiency-dark.svg" alt="04 — Skill proficiency"/>
 </picture>
 
-<picture>
+<a href="https://lokeshe09.github.io/lokeshe09/#proficiency" title="Open the interactive version — hover for exact values"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chart-skills-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chart-skills-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chart-skills-dark.svg" alt="Self-assessed depth: Python 95%, PyTorch / TensorFlow 90%, LLM fine-tuning & RAG 90%, Computer vision 85%, Quantization & deployment 80%, SQL / databases 75%"/>
-</picture>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chart-skills-dark.svg" title="Skill depth — hover each bar for the exact value in the interactive version (click)" alt="Self-assessed depth: Python 95%, PyTorch / TensorFlow 90%, LLM fine-tuning & RAG 90%, Computer vision 85%, Quantization & deployment 80%, SQL / databases 75%"/>
+</picture></a>
 
 <details>
 <summary><sub>Table view</sub></summary>
@@ -189,27 +189,29 @@
   <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/sh-analytics-dark.svg" alt="05 — GitHub analytics"/>
 </picture>
 
-<picture>
+<div align="center"><sub>Live data, rebuilt daily. &nbsp;<b><a href="https://lokeshe09.github.io/lokeshe09/">Open the interactive version ↗</a></b> — hover any bar, tick, day or block for the exact number.</sub></div>
+
+<a href="https://lokeshe09.github.io/lokeshe09/#contrib3d" title="Open the interactive version — hover for exact values"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/contrib3d-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/contrib3d-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/contrib3d-dark.svg" alt="3D isometric contribution calendar — the last 52 weeks, one block per day, height by contributions"/>
-</picture>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/contrib3d-dark.svg" title="3D contribution calendar — click to hover every day's count in the interactive version" alt="3D isometric contribution calendar — the last 52 weeks, one block per day, height by contributions"/>
+</picture></a>
 
 <br/>
 
-<picture>
+<a href="https://lokeshe09.github.io/lokeshe09/#stats" title="Open the interactive version — hover for exact values"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stats-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stats-dark.svg" alt="GitHub analytics — commits, contributions, active days, public repos, pull requests, languages, and a language share bar"/>
-</picture>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stats-dark.svg" title="GitHub analytics — click to hover each KPI and language in the interactive version" alt="GitHub analytics — commits, contributions, active days, public repos, pull requests, languages, and a language share bar"/>
+</picture></a>
 
 <br/>
 
-<picture>
+<a href="https://lokeshe09.github.io/lokeshe09/#streak" title="Open the interactive version — hover for exact values"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/streak-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/streak-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/streak-dark.svg" alt="Contribution streak — total contributions, current streak, longest streak, and the last 26 weeks of activity"/>
-</picture>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/streak-dark.svg" title="Contribution streak — click to hover every week, day and tick in the interactive version" alt="Contribution streak — total contributions, current streak, longest streak, and the last 26 weeks of activity"/>
+</picture></a>
 
 <br/>
 
@@ -240,5 +242,5 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/footer-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/footer-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/footer-dark.svg" alt="Lokesh E — Generative AI Engineer · designed and hand-built in SVG · 2026"/>
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/footer-dark.svg" title="Lokesh E · hand-built in SVG" alt="Lokesh E — Generative AI Engineer · designed and hand-built in SVG · 2026"/>
 </picture>

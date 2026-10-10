@@ -10,7 +10,7 @@ import os
 import sys
 from datetime import timedelta
 
-from svgkit import BOLD, SEMI, MED, REG, MONO, MONOB, T, THEMES, svg, write, glass_card, glass_tile, iso, iso_prism, shade, fmt_int
+from svgkit import BOLD, SEMI, MED, REG, MONO, MONOB, T, THEMES, svg, write, glass_card, glass_tile, iso, iso_prism, shade, fmt_int, tip
 from ghdata import calendar
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), "..", "assets")
@@ -86,7 +86,8 @@ def render(theme):
         begin = 0.1 + w * 0.028 + d * 0.01
         anim = (f'<animateTransform attributeName="transform" type="translate" from="0 18" to="0 0" dur="0.7s" begin="{begin:.2f}s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>'
                 f'<animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="{begin:.2f}s" fill="freeze"/>')
-        prism = iso_prism(ox, oy, w * step, d * step, cell, cell, h, top, left, right)
+        label = f"{dt.strftime('%a, %b %d, %Y').replace(' 0', ' ')} · {c} contribution{'s' if c != 1 else ''}"
+        prism = iso_prism(ox, oy, w * step, d * step, cell, cell, h, top, left, right, extra=tip(label))
         b.append(f'<g opacity="0">{anim}{prism}</g>')
 
     # month labels along the front-left edge (where the month changes)
@@ -119,6 +120,7 @@ def render(theme):
         tw = 180
         tx -= tw
         b.append(glass_tile(t, tx, ty, tw - 12, 56, 14, uid))
+        b.append(f'<rect x="{tx}" y="{ty}" width="{tw-12}" height="56" rx="14" fill="transparent"{tip(f"{label.title()}: {val} (last 52 weeks)")}/>')
         b.append(T(MONO, label, tx + 18, ty + 22, 10, t["ink3"], tracking=0.14))
         b.append(T(BOLD, val, tx + 18, ty + 46, 20, t["ink"], tracking=-0.02))
     write("contrib3d", theme, svg(W, H, "".join(b), defs), OUT)

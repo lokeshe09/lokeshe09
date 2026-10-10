@@ -53,11 +53,15 @@ jobs:
           [ -f dist/contrib3d-dark.svg ] || { cp assets/contrib3d-dark.svg assets/contrib3d-light.svg dist/; echo "::warning::3D calendar build failed - kept committed card."; }
           ls -la dist
 
-      - name: Commit refreshed live cards to main (so the README never 404s)
+      - name: Rebuild the interactive site (docs/) with the fresh cards
         run: |
           cp dist/stats-*.svg dist/streak-*.svg dist/contrib3d-*.svg assets/
+          python tools/build_site.py assets docs
+
+      - name: Commit refreshed live cards + site to main (so the README never 404s)
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats-*.svg assets/streak-*.svg assets/contrib3d-*.svg
+          git add assets/stats-*.svg assets/streak-*.svg assets/contrib3d-*.svg docs/
           git diff --cached --quiet || { git commit -m "chore: refresh live profile cards [skip ci]"; git push; }
 

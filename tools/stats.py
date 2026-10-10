@@ -11,7 +11,7 @@ import sys
 import urllib.request
 from datetime import datetime
 
-from svgkit import BOLD, SEMI, MED, REG, MONO, MONOB, T, THEMES, svg, write, glass_card, glass_tile, fmt_int
+from svgkit import BOLD, SEMI, MED, REG, MONO, MONOB, T, THEMES, svg, write, glass_card, glass_tile, fmt_int, tip
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), "..", "assets")
 LOGIN = sys.argv[2] if len(sys.argv) > 2 else "lokeshe09"
@@ -95,18 +95,19 @@ def render(theme):
 
     # ── KPI grid (left, 3 × 2) ────────────────────────────────────────────
     kpis = [
-        ("Commits", fmt_int(commits)),
-        ("Contributions", fmt_int(contribs)),
-        ("Active days", fmt_int(active_days)),
-        ("Public repos", fmt_int(repos)),
-        ("Pull requests", fmt_int(prs)),
-        ("Languages", fmt_int(len(lang_bytes))),
+        ("Commits", fmt_int(commits), f"{fmt_int(commits)} commits, all time, including private repositories"),
+        ("Contributions", fmt_int(contribs), f"{fmt_int(contribs)} contributions (commits, PRs, issues, reviews) since {created.strftime('%b %Y')}"),
+        ("Active days", fmt_int(active_days), f"{fmt_int(active_days)} days with at least one contribution"),
+        ("Public repos", fmt_int(repos), f"{fmt_int(repos)} own, non-fork public repositories"),
+        ("Pull requests", fmt_int(prs), f"{fmt_int(prs)} pull requests opened · {fmt_int(issues)} issues"),
+        ("Languages", fmt_int(len(lang_bytes)), f"{len(lang_bytes)} languages across public repos · top: {ranked[0][0] if ranked else '—'}"),
     ]
     gx, gy, cw, ch = 40, 92, 210, 140
-    for i, (label, val) in enumerate(kpis):
+    for i, (label, val, tp) in enumerate(kpis):
         col, row = i % 3, i // 3
         x, y = gx + col * cw, gy + row * ch
-        b.append(f'<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="{0.15+0.08*i:.2f}s" fill="freeze"/>')
+        b.append(f'<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="{0.15+0.08*i:.2f}s" fill="freeze"/>'
+                 f'<rect x="{x-10}" y="{y}" width="{cw-16}" height="{ch-22}" rx="12" fill="transparent"{tip(tp)}/>')
         b.append(T(MED, label, x, y + 28, 13, t["ink2"]))
         b.append(T(BOLD, val, x, y + 82, 44, t["ink"], tracking=-0.03))
         b.append("</g>")
@@ -135,7 +136,9 @@ def render(theme):
             d = f"M{x} {by}H{x+w-4}a4 4 0 0 1 4 4V{by+bh-4}a4 4 0 0 1 -4 4H{x}Z"
         else:
             d = f"M{x} {by}H{x+w}V{by+bh}H{x}Z"
-        b.append(f'<path d="{d}" fill="{col}"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="{0.3+0.1*i:.2f}s" fill="freeze"/></path>')
+        kb = lang_bytes.get(name, sum(v for k, v in ranked[TOP:])) / 1024
+        size_s = f"{kb/1024:.1f} MB" if kb > 1024 else f"{kb:.0f} KB"
+        b.append(f'<path d="{d}" fill="{col}"{tip(f"{name} · {frac*100:.1f}% · {size_s}")}><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="{0.3+0.1*i:.2f}s" fill="freeze"/></path>')
         x += w + gap
     # legend rows (2 columns)
     ry = by + 48
@@ -143,6 +146,9 @@ def render(theme):
         col = cols[i] if name != "Other" else t["ink3"]
         cx = lx + (i % 2) * (lw / 2)
         cy = ry + (i // 2) * 34
+        kb = lang_bytes.get(name, sum(v for k, v in ranked[TOP:])) / 1024
+        size_s = f"{kb/1024:.1f} MB" if kb > 1024 else f"{kb:.0f} KB"
+        b.append(f'<rect x="{cx-8:.0f}" y="{cy-16}" width="{lw/2-16:.0f}" height="28" rx="8" fill="transparent"{tip(f"{name} · {frac*100:.1f}% · {size_s}")}/>')
         b.append(f'<rect x="{cx:.0f}" y="{cy-9}" width="12" height="12" rx="3" fill="{col}"/>')
         b.append(T(MED, name, cx + 22, cy + 1, 14, t["ink"]))
         b.append(T(MONO, f"{frac*100:.1f}%", cx + lw / 2 - 28, cy + 1, 12, t["ink3"], anchor="end"))
