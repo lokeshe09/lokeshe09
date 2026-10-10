@@ -4,8 +4,8 @@
   ║                                                                          ║
   ║  Every visual on this page is a hand-built SVG from this repo:           ║
   ║    assets/  — static design system (tools/generate_assets.py)            ║
-  ║    output/  — live cards rebuilt daily by .github/workflows (stats,      ║
-  ║               streak, snake). Fallback copies live in assets/.           ║
+  ║    live cards (stats, streak, 3D calendar) are rebuilt daily by          ║
+  ║    .github/workflows/profile-assets.yml and committed back to assets/    ║
   ║  Dark + light variants are switched with <picture> + prefers-color-scheme ║
   ╚══════════════════════════════════════════════════════════════════════════╝
 -->
@@ -209,14 +209,6 @@
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/streak-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/streak-light.svg">
   <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/streak-dark.svg" alt="Contribution streak — total contributions, current streak, longest streak, and the last 26 weeks of activity"/>
-</picture>
-
-<br/>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/github-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/github-snake.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/github-snake-dark.svg" alt="Contribution snake animation"/>
 </picture>
 
 <br/>
