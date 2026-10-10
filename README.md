@@ -247,10 +247,11 @@ class LokeshE:
 
 <br/><br/>
 
+<!-- Streak card: built daily from live contribution data by .github/workflows/profile-assets.yml → output branch -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=lokeshe09&border_radius=20&background=0F1522&border=1F2937&ring=2AE86D&fire=2AE86D&currStreakNum=F1F5F9&sideNums=F1F5F9&currStreakLabel=2AE86D&sideLabels=A3B0C2&dates=6B7A90">
-  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=lokeshe09&border_radius=20&background=F8FAFC&border=E2E8F0&ring=16A34A&fire=16A34A&currStreakNum=0F172A&sideNums=0F172A&currStreakLabel=16A34A&sideLabels=475569&dates=64748B">
-  <img width="100%" src="https://streak-stats.demolab.com/?user=lokeshe09&border_radius=20&background=0F1522&border=1F2937&ring=2AE86D&fire=2AE86D&currStreakNum=F1F5F9&sideNums=F1F5F9&currStreakLabel=2AE86D&sideLabels=A3B0C2&dates=6B7A90" alt="Contribution streak"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/streak-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/streak-light.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/streak-dark.svg" alt="Contribution streak — total contributions, current streak, longest streak, and the last 26 weeks of activity"/>
 </picture>
 
 <br/><br/>

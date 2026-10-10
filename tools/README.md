@@ -16,3 +16,16 @@ between them with `<picture>` + `prefers-color-scheme`.
 
 Edit copy, colors (`THEMES`), skills (`SKILLS`) or cards (`CARDS`) in the
 script, re-run, commit.
+
+## Streak card (live data)
+
+`tools/streak.py` pulls the full contribution calendar from the GitHub GraphQL
+API and renders `streak-dark.svg` / `streak-light.svg` — total contributions,
+current streak (ring = % of personal record), longest streak, and a 26-week
+sparkline. `.github/workflows/profile-assets.yml` runs it daily (and on every
+push) and publishes to the `output` branch alongside the snake; the README
+reads from there. The copy in `assets/` is only a fallback if the live build fails.
+
+```powershell
+$env:GITHUB_TOKEN = (gh auth token); python tools/streak.py assets lokeshe09
+```
