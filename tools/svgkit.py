@@ -79,7 +79,7 @@ THEMES = {
         grid="#E2E8F0", track="rgba(22,163,74,0.12)",
         accent="#16A34A", accent2="#0891B2", accent3="#2563EB", accent4="#D97706",
         bar="#16A34A", name1="#0F172A", name2="#166534",
-        glowA="#86EFAC", glowB="#93C5FD", glowC="#A5F3FC", glowOp="0.55",
+        glowA="#34D399", glowB="#60A5FA", glowC="#22D3EE", glowOp="0.55",
         dot="rgba(15,23,42,0.10)", chipbg="rgba(15,23,42,0.03)",
         btnText="#FFFFFF", iconTint="rgba(22,163,74,0.10)",
     ),
@@ -126,9 +126,9 @@ GLASS = {
     "dark": dict(fill="rgba(255,255,255,0.035)", tile="rgba(255,255,255,0.06)", edgeHi="rgba(255,255,255,0.42)",
                  edgeLo="rgba(255,255,255,0.07)", hi="rgba(255,255,255,0.75)", orbOp="0.58",
                  extrude="#0B3B22", extrudeEdge="#19B058", shine="rgba(255,255,255,0.55)"),
-    "light": dict(fill="rgba(255,255,255,0.58)", tile="rgba(255,255,255,0.72)", edgeHi="rgba(15,23,42,0.22)",
-                  edgeLo="rgba(15,23,42,0.05)", hi="rgba(255,255,255,1)", orbOp="0.62",
-                  extrude="#A7F3C6", extrudeEdge="#86EFAC", shine="rgba(255,255,255,0.9)"),
+    "light": dict(fill="rgba(255,255,255,0.46)", tile="rgba(255,255,255,0.62)", edgeHi="rgba(255,255,255,0.95)",
+                  edgeLo="rgba(15,23,42,0.08)", hi="rgba(255,255,255,1)", orbOp="0.55",
+                  extrude="#15803D", extrudeEdge="#22C55E", shine="rgba(255,255,255,0.95)"),
 }
 for _k, _v in GLASS.items():
     THEMES[_k].update({f"g_{kk}": vv for kk, vv in _v.items()})
@@ -212,3 +212,13 @@ def shade(hexcol, k):
     r, g, b = (int(hexcol[i:i+2], 16) for i in (0, 2, 4))
     f = lambda v: max(0, min(255, int(round(v * k if k <= 1 else v + (255 - v) * (k - 1)))))
     return f"#{f(r):02X}{f(g):02X}{f(b):02X}"
+
+
+def keycap(t, x, y, w, h, color, uid, depth=4, rx=10, fill=None):
+    """A 3D glass keycap: frosted face sitting on a coloured extruded edge."""
+    face = fill or t["g_tile"]
+    return (f'<rect x="{x:.1f}" y="{y+depth:.1f}" width="{w:.1f}" height="{h:.1f}" rx="{rx}" fill="{shade(color, 0.72)}"/>'
+            f'<rect x="{x:.1f}" y="{y+depth-1:.1f}" width="{w:.1f}" height="{h:.1f}" rx="{rx}" fill="{color}" opacity="0.9"/>'
+            f'<rect x="{x+0.5:.1f}" y="{y+0.5:.1f}" width="{w-1:.1f}" height="{h-1:.1f}" rx="{rx}" fill="{t["panel"]}"/>'
+            f'<rect x="{x+0.5:.1f}" y="{y+0.5:.1f}" width="{w-1:.1f}" height="{h-1:.1f}" rx="{rx}" fill="{face}" stroke="url(#{uid}-bd)"/>'
+            f'<rect x="{x+rx:.1f}" y="{y+1:.1f}" width="{w-2*rx:.1f}" height="1" fill="url(#{uid}-hl)" opacity="0.9"/>')

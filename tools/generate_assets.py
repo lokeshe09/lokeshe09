@@ -13,7 +13,7 @@ if len(sys.argv) > 1:
 if len(sys.argv) > 2:
     os.environ["OUT_DIR"] = sys.argv[2]
 
-from svgkit import (BOLD, SEMI, MED, REG, MONO, MONOB, T, THEMES, svg, write, glass_card, glass_tile,
+from svgkit import (BOLD, SEMI, MED, REG, MONO, MONOB, T, THEMES, svg, write, glass_card, glass_tile, keycap,
                     iso, iso_prism, shade, dotgrid, DEFAULT_OUT as OUT)
 
 SPLINE = 'calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"'
@@ -66,8 +66,25 @@ def hero(t, theme):
              f'<clipPath id="namec"><path d="{name_path}"/></clipPath>'
              f'<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{t["g_shine"]}" stop-opacity="0"/><stop offset="0.5" stop-color="{t["g_shine"]}"/><stop offset="1" stop-color="{t["g_shine"]}" stop-opacity="0"/></linearGradient>'
              f'<linearGradient id="lineg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{t["accent"]}" stop-opacity="0"/><stop offset="0.5" stop-color="{t["accent"]}"/><stop offset="1" stop-color="{t["accent2"]}" stop-opacity="0"/>'
-             f'<animate attributeName="x1" values="-1;1" dur="6s" repeatCount="indefinite"/><animate attributeName="x2" values="0;2" dur="6s" repeatCount="indefinite"/></linearGradient>')
+             f'<animate attributeName="x1" values="-1;1" dur="6s" repeatCount="indefinite"/><animate attributeName="x2" values="0;2" dur="6s" repeatCount="indefinite"/></linearGradient>'
+             f'<linearGradient id="{uid}-floorfade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{t["panel"]}"/><stop offset="0.35" stop-color="{t["panel"]}" stop-opacity="0"/></linearGradient>')
     b = [body]
+    # 3D world: perspective floor grid fading into the horizon (clipped to the card)
+    b.append(f'<g clip-path="url(#{uid}-clip)" opacity="{0.55 if theme == "dark" else 0.5}">')
+    hz, floor_y = 300, H + 40
+    for i in range(-10, 11):
+        b.append(f'<path d="M{W/2 + i*160:.0f} {floor_y} L{W/2 + i*22:.0f} {hz}" stroke="{t["accent"]}" stroke-width="0.8" opacity="0.35"/>')
+    for k in range(1, 8):
+        yy = hz + (floor_y - hz) * (k / 7) ** 2.2
+        b.append(f'<path d="M0 {yy:.0f}H{W}" stroke="{t["accent2"]}" stroke-width="0.8" opacity="{0.08 + k*0.05:.2f}"/>')
+    b.append(f'<rect x="0" y="{hz-40}" width="{W}" height="{H-hz+40}" fill="url(#{uid}-floorfade)"/>')
+    import random
+    rnd = random.Random(7)
+    for k in range(70):
+        sx, sy, r = rnd.uniform(0, W), rnd.uniform(0, 300), rnd.choice((0.8, 1.1, 1.6))
+        b.append(f'<circle cx="{sx:.0f}" cy="{sy:.0f}" r="{r}" fill="{t["ink"]}" opacity="{rnd.uniform(0.15, 0.6):.2f}">'
+                 f'<animate attributeName="opacity" values="0.1;0.7;0.1" dur="{rnd.uniform(2.5, 6):.1f}s" begin="{rnd.uniform(0, 4):.1f}s" repeatCount="indefinite"/></circle>')
+    b.append("</g>")
 
     # top bar
     b.append(f'<circle cx="44" cy="44" r="5" fill="{t["accent"]}"/>')
@@ -84,6 +101,7 @@ def hero(t, theme):
 
     # 3D extruded name
     b.append(T(MONO, "HELLO, I'M", 60, 148, 13, t["accent"], tracking=0.18))
+    b.append(f'<path d="{name_path}" fill="{t["accent"]}" opacity="{0.45 if theme == "dark" else 0.3}" filter="url(#{uid}-blur)" transform="translate(0 20)"/>')
     depth = 9
     for i in range(depth, 0, -1):
         k = 0.55 + 0.45 * (1 - i / depth)
@@ -103,7 +121,7 @@ def hero(t, theme):
         x += cw + 10
 
     # 3D scene (right)
-    b.append(iso_stack(t, 950, 250, 150, 5, 30, t["accent"], uid))
+    b.append(iso_stack(t, 960, 312, 148, 6, 24, t["accent"], uid))
     b.append(f'<rect x="{W-420}" y="434" width="360" height="2" rx="1" fill="url(#lineg)"/>')
     b.append(T(MONO, "scroll ↓", W - 60, 422, 11.5, t["ink3"], anchor="end", tracking=0.06))
     write("hero", theme, svg(W, H, "".join(b), defs))
@@ -127,13 +145,14 @@ def section(t, theme, key, idx, title, caption):
     defs = (f'<linearGradient id="hl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{t["accent"]}" stop-opacity="0.6"/><stop offset="0.35" stop-color="{t["border2"]}"/><stop offset="1" stop-color="{t["border2"]}" stop-opacity="0"/></linearGradient>'
             f'<linearGradient id="tg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{t["accent"]}" stop-opacity="0.25"/><stop offset="1" stop-color="{t["accent2"]}" stop-opacity="0.08"/></linearGradient>')
     b = []
-    # index tile (3D-ish: stacked offset copies)
-    for i in (2, 1):
-        b.append(f'<rect x="{i*2}" y="{24+i*2}" width="40" height="40" rx="11" fill="{t["accent"]}" opacity="{0.18 - 0.06*i:.2f}"/>')
-    b.append(f'<rect x="0.5" y="24.5" width="39" height="39" rx="11" fill="url(#tg)" stroke="{t["border2"]}"/>')
-    b.append(T(MONOB, idx, 20, 50, 14, t["accent"], anchor="middle", tracking=0.06))
+    # index: a floating isometric glass cube with the number on its top face
+    b.append(f'<g>{bob(3, 4.2)}' + iso_prism(22, 40, -14, -14, 28, 28, 16, t["accent"], shade(t["accent"], 0.72), shade(t["accent"], 0.55), opacity=0.95, stroke=t["g_hi"]) + "</g>")
+    b.append(T(MONOB, idx, 22, 30, 11, t["btnText"], anchor="middle", tracking=0.06))
     tw = SEMI.width(title, 34, -0.02)
-    b.append(T(SEMI, title, 58, 57, 34, t["ink"], tracking=-0.02))
+    tp = SEMI.path(title, 58, 57, 34, tracking=-0.02)
+    for i in (3, 2, 1):
+        b.append(f'<path d="{tp}" fill="{t["g_extrude"]}" transform="translate({i*0.9:.1f} {i*0.9:.1f})" opacity="{0.9 - i*0.15:.2f}"/>')
+    b.append(f'<path d="{tp}" fill="{t["ink"]}"/>')
     b.append(f'<rect x="{58+tw+24:.0f}" y="46" width="{W-(58+tw+24)-230:.0f}" height="2" rx="1" fill="url(#hl)"/>')
     b.append(T(MONO, caption, W, 51, 12, t["ink3"], anchor="end", tracking=0.16))
     write(f"sh-{key}", theme, svg(W, H, "".join(b), defs))
@@ -271,7 +290,7 @@ def expertise_card(t, theme, key, title, acc, icon, bullets, tags, idx):
     b.append(T(MONO, f"0{idx+1} / CAPABILITY", 92, 71, 11, t["ink3"], tracking=0.12))
     y = 116
     for line in bullets:
-        b.append(f'<circle cx="34" cy="{y-5}" r="3" fill="{c}"/>')
+        b.append(iso_prism(34, y - 7, -3.5, -3.5, 7, 7, 5, c, shade(c, 0.75), shade(c, 0.55)))
         b.append(T(MED, line, 48, y, 15, t["ink2"]))
         y += 28
     x = 28
@@ -385,15 +404,18 @@ def button(t, theme, key, label, primary):
             f'<linearGradient id="hl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{t["g_hi"]}" stop-opacity="0"/><stop offset="0.5" stop-color="{t["g_hi"]}"/><stop offset="1" stop-color="{t["g_hi"]}" stop-opacity="0"/></linearGradient>')
     b = []
     if primary:
-        b.append(f'<rect x="{m+4}" y="{m+8}" width="{bw-8}" height="{bh-8}" rx="12" fill="{t["accent"]}" opacity="0.55" filter="url(#glow)"/>')
-        b.append(f'<rect x="{m+0.5}" y="{m+0.5}" width="{bw-1}" height="{bh-1}" rx="12" fill="url(#pg)"/>')
+        b.append(f'<rect x="{m+4}" y="{m+8}" width="{bw-8}" height="{bh-8}" rx="12" fill="{t["accent"]}" opacity="0.6" filter="url(#glow)"/>')
+        b.append(f'<rect x="{m}" y="{m+4}" width="{bw}" height="{bh-4}" rx="12" fill="{shade(t["accent"], 0.62)}"/>')
+        b.append(f'<rect x="{m+0.5}" y="{m+0.5}" width="{bw-1}" height="{bh-5}" rx="12" fill="url(#pg)"/>')
         fg = t["btnText"]
     else:
-        b.append(f'<rect x="{m+0.5}" y="{m+0.5}" width="{bw-1}" height="{bh-1}" rx="12" fill="{t["chipbg"]}" stroke="url(#bd)"/>')
+        b.append(f'<rect x="{m}" y="{m+4}" width="{bw}" height="{bh-4}" rx="12" fill="{t["border2"]}"/>')
+        b.append(f'<rect x="{m+0.5}" y="{m+0.5}" width="{bw-1}" height="{bh-5}" rx="12" fill="{t["panel"]}"/>')
+        b.append(f'<rect x="{m+0.5}" y="{m+0.5}" width="{bw-1}" height="{bh-5}" rx="12" fill="{t["g_tile"]}" stroke="url(#bd)"/>')
         fg = t["ink"]
     b.append(f'<rect x="{m+12}" y="{m+1}" width="{bw-24}" height="1" fill="url(#hl)" opacity="0.8"/>')
-    b.append(T(SEMI, label, m + pad, m + 31, 15, fg, tracking=-0.005))
-    b.append(f'<path d="M{m+bw-pad-12} {m+31}l12-12M{m+bw-pad-10} {m+19}h10v10" fill="none" stroke="{fg}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>')
+    b.append(T(SEMI, label, m + pad, m + 29, 15, fg, tracking=-0.005))
+    b.append(f'<path d="M{m+bw-pad-12} {m+29}l12-12M{m+bw-pad-10} {m+17}h10v10" fill="none" stroke="{fg}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>')
     write(f"btn-{key}", theme, svg(W, H, "".join(b), defs))
 
 
@@ -414,7 +436,56 @@ def footer(t, theme):
 
 
 # ──────────────────────────────────────────────────────────────────────────────
+STACK = [
+    ("languages", "01", "LANGUAGES", [("Python", "#3776AB"), ("C", "#5C8DBC"), ("Java", "#E76F00")]),
+    ("ai", "02", "AI · ML · DL", [("PyTorch", "#EE4C2C"), ("TensorFlow", "#FF6F00"), ("Keras", "#D00000"), ("scikit-learn", "#F7931E"),
+                                 ("OpenCV", "#5C3EE8"), ("Hugging Face", "#FFB000"), ("Transformers", "#FF9D00"), ("PEFT / LoRA", "#2AE86D"), ("LangChain", "#1C8C6E")]),
+    ("data", "03", "DATA & NUMERICAL", [("NumPy", "#4DABCF"), ("Pandas", "#8A4FFF"), ("SciPy", "#0C55A5"), ("Matplotlib", "#11557C")]),
+    ("backend", "04", "BACKEND · CLOUD · DEVOPS", [("Flask", "#64748B"), ("Gunicorn", "#499848"), ("Nginx", "#009639"), ("MySQL", "#4479A1"), ("PostgreSQL", "#336791"),
+                                                  ("Firebase", "#F5820D"), ("Google Cloud", "#4285F4"), ("Vercel", "#64748B"), ("Netlify", "#00C7B7"), ("REST APIs", "#60A5FA")]),
+    ("tools", "05", "TOOLS", [("Git", "#F05032"), ("GitHub", "#64748B"), ("GitHub Actions", "#2088FF"), ("CI / CD", "#FBBF24")]),
+]
+
+
+def stack_board(t, theme, key, idx, label, items):
+    """A glass board of 3D keycaps - one per tool."""
+    W = 1200
+    size, pad, gapx, gapy, kh = 14, 18, 12, 14, 42
+    x0, y0, maxw = 40, 76, W - 80
+    rows, x, row = [], x0, []
+    for name, col in items:
+        w = MED.width(name, size) + pad * 2 + 20
+        if x + w > x0 + maxw:
+            rows.append(row); row, x = [], x0
+        row.append((name, col, x, w)); x += w + gapx
+    rows.append(row)
+    H = y0 + len(rows) * (kh + gapy) + 22
+    uid = f"sb{idx}"
+    defs, body = glass_card(t, W, H, 20, uid=uid, intensity=0.5,
+                            orbs=[(t["glowA"], 120, H, 160, 50, -20, 15), (t["glowB"], W - 100, 0, 200, -60, 30, 19), (t["glowC"], W * 0.55, H + 40, 140, 40, -30, 17)])
+    b = [body]
+    b.append(iso_prism(46, 40, -8, -8, 16, 16, 10, t["accent"], shade(t["accent"], 0.72), shade(t["accent"], 0.55), stroke=t["g_hi"]))
+    b.append(T(MONO, f"{idx} / {label}", 70, 44.5, 12, t["ink2"], tracking=0.16))
+    b.append(T(MONO, f"{len(items)} TOOLS", W - 40, 44.5, 11, t["ink3"], anchor="end", tracking=0.12))
+    b.append(f'<rect x="40" y="62" width="{W-80}" height="1" fill="{t["grid"]}"/>')
+    n = 0
+    for r, row in enumerate(rows):
+        y = y0 + r * (kh + gapy)
+        for name, col, x, w in row:
+            b.append(f'<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="{0.1 + n*0.05:.2f}s" fill="freeze"/>'
+                     f'<animateTransform attributeName="transform" type="translate" from="0 10" to="0 0" dur="0.5s" begin="{0.1 + n*0.05:.2f}s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>')
+            b.append(keycap(t, x, y, w, kh, col, uid))
+            b.append(f'<circle cx="{x+pad+2:.1f}" cy="{y+kh/2:.1f}" r="4.5" fill="{col}"/>')
+            b.append(f'<circle cx="{x+pad+2:.1f}" cy="{y+kh/2:.1f}" r="7" fill="{col}" opacity="0.35"/>')
+            b.append(T(MED, name, x + pad + 16, y + kh / 2 + 5, size, t["ink"]))
+            b.append("</g>")
+            n += 1
+    write(f"stack-{key}", theme, svg(W, H, "".join(b), defs))
+
+
 for theme, t in THEMES.items():
+    for key, idx, label, items in STACK:
+        stack_board(t, theme, key, idx, label, items)
     hero(t, theme)
     for key, idx, title, cap in SECTIONS:
         section(t, theme, key, idx, title, cap)

@@ -110,81 +110,43 @@
   <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/sh-stack-dark.svg" alt="03 — Tech stack"/>
 </picture>
 
-<div align="center">
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-languages-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-languages-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-languages-dark.svg" alt="Languages"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-languages-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-languages-light.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-languages-dark.svg" alt="Languages — Python, C, Java"/>
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py,c,java&theme=dark">
-  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py,c,java&theme=light">
-  <img src="https://skillicons.dev/icons?i=py,c,java&theme=dark" alt="Python, C, Java"/>
-</picture>
+<br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-ai-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-ai-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-ai-dark.svg" alt="AI · ML · DL"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-ai-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-ai-light.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-ai-dark.svg" alt="AI · ML · DL — PyTorch, TensorFlow, Keras, scikit-learn, OpenCV, Hugging Face, Transformers, PEFT / LoRA, LangChain"/>
 </picture>
+
+<br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,opencv&theme=dark">
-  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,opencv&theme=light">
-  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,opencv&theme=dark" alt="PyTorch, TensorFlow, scikit-learn, OpenCV"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-data-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-data-light.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-data-dark.svg" alt="Data & numerical — NumPy, Pandas, SciPy, Matplotlib"/>
 </picture>
+
+<br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-ai-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-ai-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-ai-dark.svg" alt="Hugging Face, Transformers, PEFT / LoRA, LangChain, Keras"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-backend-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-backend-light.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-backend-dark.svg" alt="Backend · Cloud · DevOps — Flask, Gunicorn, Nginx, MySQL, PostgreSQL, Firebase, Google Cloud, Vercel, Netlify, REST APIs"/>
 </picture>
+
+<br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-data-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-data-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-data-dark.svg" alt="Data & numerical"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-tools-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-tools-light.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stack-tools-dark.svg" alt="Tools — Git, GitHub, GitHub Actions, CI / CD"/>
 </picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-data-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-data-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-data-dark.svg" alt="NumPy, Pandas, SciPy, Matplotlib"/>
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-backend-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-backend-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-backend-dark.svg" alt="Backend · Cloud · DevOps"/>
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=flask,mysql,postgres,firebase,gcp,nginx,vercel,netlify&theme=dark">
-  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=flask,mysql,postgres,firebase,gcp,nginx,vercel,netlify&theme=light">
-  <img src="https://skillicons.dev/icons?i=flask,mysql,postgres,firebase,gcp,nginx,vercel,netlify&theme=dark" alt="Flask, MySQL, PostgreSQL, Firebase, Google Cloud, Nginx, Vercel, Netlify"/>
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-backend-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-backend-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/chips-backend-dark.svg" alt="Gunicorn, REST APIs, CI / CD"/>
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-tools-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-tools-light.svg">
-  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/lbl-tools-dark.svg" alt="Tools"/>
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=git,github,githubactions&theme=dark">
-  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=git,github,githubactions&theme=light">
-  <img src="https://skillicons.dev/icons?i=git,github,githubactions&theme=dark" alt="Git, GitHub, GitHub Actions"/>
-</picture>
-
-</div>
 
 <br/>
 
