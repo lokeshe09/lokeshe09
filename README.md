@@ -1,74 +1,141 @@
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--  HERO                                                                   -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:2AE86D,100:0A66C2&amp;height=200&amp;section=header&amp;text=Lokesh%20E&amp;fontSize=60&amp;fontColor=ffffff&amp;animation=fadeIn&amp;fontAlignY=35&amp;desc=Generative%20AI%20Engineer%20%7C%20Building%20Systems%20at%20the%20Edge%20of%20What's%20Possible&amp;descAlignY=55&amp;descSize=18" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0A66C2,45:1FB592,100:2AE86D&height=240&section=header&text=Lokesh%20E&fontSize=68&fontColor=ffffff&animation=twinkling&fontAlignY=36&desc=Generative%20AI%20Engineer%20%E2%80%A2%20Building%20Systems%20at%20the%20Edge%20of%20What%27s%20Possible&descAlignY=58&descSize=18" alt="Lokesh E — Generative AI Engineer"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=22&amp;pause=1000&amp;color=2AE86D&amp;center=true&amp;vCenter=true&amp;width=750&amp;lines=Fine-tuning+Frontier+Language+%26+Vision+Models;Building+Autonomous+AI+Agents+%26+RAG+Systems;Optimizing+%26+Deploying+Models+at+Scale;Turning+Research+Papers+into+Production+Systems" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=2AE86D&center=true&vCenter=true&repeat=true&width=760&height=48&lines=Fine-tuning+Frontier+LLMs+%26+Vision-Language+Models;Architecting+Autonomous+AI+Agents;Building+Production-grade+RAG+Systems;Quantizing+%26+Serving+Models+at+Scale;Turning+Research+Papers+into+Products" alt="Typing animation"/>
 
 <br/>
 
-<a href="https://www.linkedin.com/in/lokesh-e-60a583201" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="https://huggingface.co/lokeshe09" target="_blank"><img src="https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge"/></a>
-<a href="mailto:lokeshe0912@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://lokeshe-09.github.io/" target="_blank"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a>
-<a href="https://aicraftalchemy.github.io/" target="_blank"><img src="https://img.shields.io/badge/AI_Craft_Alchemy-0A66C2?style=for-the-badge&logo=googlechrome&logoColor=white"/></a>
+<!-- ── Navigation ─────────────────────────────────────────────────────── -->
 
-<img src="https://komarev.com/ghpvc/?username=lokeshe09&label=Profile%20Views&color=2AE86D&style=for-the-badge" alt="profile views"/>
+**[About](#-about-me)** &nbsp;·&nbsp; **[Expertise](#-core-expertise)** &nbsp;·&nbsp; **[Tech Stack](#-tech-stack)** &nbsp;·&nbsp; **[Proficiency](#-skill-proficiency)** &nbsp;·&nbsp; **[Analytics](#-github-analytics)** &nbsp;·&nbsp; **[Connect](#-lets-build-something)**
+
+<br/>
+
+<!-- ── Social ─────────────────────────────────────────────────────────── -->
+
+<a href="https://www.linkedin.com/in/lokesh-e-60a583201" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>&nbsp;
+<a href="https://huggingface.co/lokeshe09" target="_blank"><img src="https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge&logoColor=0d1117" alt="Hugging Face"/></a>&nbsp;
+<a href="mailto:lokeshe0912@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/></a>&nbsp;
+<a href="https://lokeshe-09.github.io/" target="_blank"><img src="https://img.shields.io/badge/Portfolio-0d1117?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/></a>&nbsp;
+<a href="https://aicraftalchemy.github.io/" target="_blank"><img src="https://img.shields.io/badge/AI_Craft_Alchemy-2AE86D?style=for-the-badge&logo=googlechrome&logoColor=0d1117" alt="AI Craft Alchemy"/></a>
+
+<br/><br/>
+
+<img src="https://komarev.com/ghpvc/?username=lokeshe09&label=Profile%20Views&color=2AE86D&style=flat-square" alt="Profile views"/>&nbsp;
+<img src="https://img.shields.io/badge/Open_to-Collaboration-0A66C2?style=flat-square&labelColor=0d1117" alt="Open to collaboration"/>&nbsp;
+<img src="https://img.shields.io/badge/Focus-LLMs_%E2%80%A2_VLMs_%E2%80%A2_Agents-FFD21E?style=flat-square&labelColor=0d1117" alt="Focus"/>
 
 </div>
 
 <br/>
 
-## 🌌 About Me
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0A66C2,100:2AE86D&height=3" alt=""/>
 
-<div align="center">
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--  ABOUT                                                                  -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-![](https://img.shields.io/badge/🔭_Current_Focus-Fine--tuning_%26_deploying_LLMs_%2F_VLMs_at_scale-2AE86D?style=for-the-badge&labelColor=1a1a1a)
+## 🧬 About Me
 
-![](https://img.shields.io/badge/🤝_Collaborating_On-Open--source_LLM%2FVLM_fine--tuning_%26_quantization-0A66C2?style=for-the-badge&labelColor=1a1a1a)
+<table align="center" width="100%" border="0">
+<tr>
+<td width="58%" valign="top">
 
-![](https://img.shields.io/badge/🌱_Learning-Advanced_quantization_%26_MoE_deployment_at_scale-FFD21E?style=for-the-badge&labelColor=1a1a1a)
+```python
+class LokeshE:
+    def __init__(self) -> None:
+        self.role      = "Generative AI Engineer"
+        self.focus     = ["LLM / VLM Fine-tuning", "RAG Systems", "Autonomous Agents"]
+        self.stack     = ["PyTorch", "Hugging Face", "LangChain", "TensorFlow"]
+        self.learning  = ["Advanced Quantization", "MoE Deployment at Scale"]
+        self.ask_me    = ["LLMs", "RAG", "AI Agents", "Computer Vision", "NLP"]
 
-![](https://img.shields.io/badge/💬_Ask_Me_About-LLMs_·_RAG_·_AI_Agents_·_Computer_Vision_·_NLP-EE4C2C?style=for-the-badge&labelColor=1a1a1a)
+    def ship(self, paper: str) -> "ProductionSystem":
+        return self.read(paper).prototype().optimize().deploy()
+```
 
-![](https://img.shields.io/badge/⚡_Fun_Fact-I_turn_papers_into_agents_before_my_coffee_gets_cold-9B59B6?style=for-the-badge&labelColor=1a1a1a)
+</td>
+<td width="42%" valign="top" align="center">
 
 <br/>
+
+<img src="https://img.shields.io/badge/🔭_Current_Focus-Fine--tuning_%26_deploying_LLMs_%2F_VLMs-2AE86D?style=for-the-badge&labelColor=0d1117" alt="Current focus"/>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/🤝_Collaborating_On-Open--source_fine--tuning_%26_quantization-0A66C2?style=for-the-badge&labelColor=0d1117" alt="Collaborating on"/>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/🌱_Learning-Quantization_%26_MoE_at_scale-FFD21E?style=for-the-badge&labelColor=0d1117" alt="Learning"/>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/⚡_Fun_Fact-Papers_become_agents_before_the_coffee_cools-9B59B6?style=for-the-badge&labelColor=0d1117" alt="Fun fact"/>
+
+<br/><br/>
 
 > *"Every model I ship is a step closer to AI that actually understands context."*
 
-</div>
+</td>
+</tr>
+</table>
 
 <br/>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0A66C2,100:2AE86D&height=3" alt=""/>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--  EXPERTISE                                                              -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
 
 ## 🧠 Core Expertise
 
 <table align="center" width="100%">
 <tr>
-<td align="center" width="33%">
-<img src="https://img.shields.io/badge/🤖-LLM_ENGINEERING-2AE86D?style=for-the-badge&labelColor=0d1117"/>
+<td align="center" width="25%" valign="top">
+<img src="https://img.shields.io/badge/🤖-LLM_ENGINEERING-2AE86D?style=for-the-badge&labelColor=0d1117" alt="LLM Engineering"/>
 <br/><br/>
 <sub>
-Fine-tuning · RAG Pipelines<br/>
-Autonomous AI Agents<br/>
-Prompt Engineering · Quantization
+Fine-tuning · LoRA / QLoRA<br/>
+RAG Pipelines<br/>
+Prompt Engineering<br/>
+Quantization
 </sub>
 </td>
-<td align="center" width="33%">
-<img src="https://img.shields.io/badge/👁️-COMPUTER_VISION-0A66C2?style=for-the-badge&labelColor=0d1117"/>
+<td align="center" width="25%" valign="top">
+<img src="https://img.shields.io/badge/🧭-AGENTIC_SYSTEMS-9B59B6?style=for-the-badge&labelColor=0d1117" alt="Agentic Systems"/>
+<br/><br/>
+<sub>
+Autonomous AI Agents<br/>
+Tool-use &amp; Orchestration<br/>
+Multi-step Reasoning<br/>
+Paper → Production
+</sub>
+</td>
+<td align="center" width="25%" valign="top">
+<img src="https://img.shields.io/badge/👁-COMPUTER_VISION-0A66C2?style=for-the-badge&labelColor=0d1117" alt="Computer Vision"/>
 <br/><br/>
 <sub>
 Image Classification<br/>
 Action Detection<br/>
-Deep CNN / EfficientNet Pipelines
+Deep CNN / EfficientNet<br/>
+Vision-Language Models
 </sub>
 </td>
-<td align="center" width="33%">
-<img src="https://img.shields.io/badge/⚙️-MLOPS_%26_DEPLOYMENT-FFD21E?style=for-the-badge&labelColor=0d1117"/>
+<td align="center" width="25%" valign="top">
+<img src="https://img.shields.io/badge/🚀-MLOPS_%26_DEPLOYMENT-FFD21E?style=for-the-badge&labelColor=0d1117" alt="MLOps & Deployment"/>
 <br/><br/>
 <sub>
-High-Throughput Model Serving<br/>
+High-Throughput Serving<br/>
 Cross-GPU Validation<br/>
-Scalable Inference Infra
+Scalable Inference Infra<br/>
+CI/CD for ML
 </sub>
 </td>
 </tr>
@@ -76,68 +143,91 @@ Scalable Inference Infra
 
 <br/>
 
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0A66C2,100:2AE86D&height=3" alt=""/>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--  TECH STACK                                                             -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+## 🧰 Tech Stack
+
+<div align="center">
+
+<sub><b>CORE TOOLKIT</b></sub>
+
+<br/><br/>
+
+<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=py,c,java,pytorch,tensorflow,sklearn,opencv,flask,mysql,postgres,firebase,gcp,nginx,vercel,netlify,git,github,githubactions&perline=9&theme=dark" alt="Core toolkit"/></a>
+
+<br/><br/>
+
+<sub><b>AI ECOSYSTEM</b></sub>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge&logoColor=0d1117" alt="Hugging Face"/>
+<img src="https://img.shields.io/badge/Transformers-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white" alt="Transformers"/>
+<img src="https://img.shields.io/badge/PEFT_%2F_LoRA-2AE86D?style=for-the-badge&labelColor=0d1117" alt="PEFT / LoRA"/>
+<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain"/>
+<img src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white" alt="Keras"/>
+
+<br/>
+
+<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy"/>
+<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
+<img src="https://img.shields.io/badge/SciPy-0C55A5?style=for-the-badge&logo=scipy&logoColor=white" alt="SciPy"/>
+<img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib"/>
+<img src="https://img.shields.io/badge/Gunicorn-499848?style=for-the-badge&logo=gunicorn&logoColor=white" alt="Gunicorn"/>
+
+</div>
+
+<br/>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0A66C2,100:2AE86D&height=3" alt=""/>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--  PROFICIENCY                                                            -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
 ## 📈 Skill Proficiency
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91_95%25-2AE86D?style=for-the-badge&labelColor=1a1a1a)
-
-![PyTorch/TensorFlow](https://img.shields.io/badge/PyTorch_%2F_TensorFlow-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91_90%25-0A66C2?style=for-the-badge&labelColor=1a1a1a)
-
-![LLM Fine-tuning & RAG](https://img.shields.io/badge/LLM_Fine--tuning_%26_RAG-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91_90%25-FFD21E?style=for-the-badge&labelColor=1a1a1a)
-
-![Computer Vision](https://img.shields.io/badge/Computer_Vision-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91%E2%96%91_85%25-2AE86D?style=for-the-badge&labelColor=1a1a1a)
-
-![Model Quantization & Deployment](https://img.shields.io/badge/Model_Quantization_%26_Deployment-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91%E2%96%91_80%25-0A66C2?style=for-the-badge&labelColor=1a1a1a)
-
-![SQL/Databases](https://img.shields.io/badge/SQL_%2F_Databases-%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%91%E2%96%91%E2%96%91_75%25-FFD21E?style=for-the-badge&labelColor=1a1a1a)
+| &nbsp;&nbsp;Domain&nbsp;&nbsp; | Depth | &nbsp; |
+| :--- | :--- | ---: |
+| 🐍 &nbsp;**Python** | <code>▰▰▰▰▰▰▰▰▰▱</code> | **95%** |
+| 🔥 &nbsp;**PyTorch / TensorFlow** | <code>▰▰▰▰▰▰▰▰▰▱</code> | **90%** |
+| 🧠 &nbsp;**LLM Fine-tuning & RAG** | <code>▰▰▰▰▰▰▰▰▰▱</code> | **90%** |
+| 👁 &nbsp;**Computer Vision** | <code>▰▰▰▰▰▰▰▰▱▱</code> | **85%** |
+| ⚡ &nbsp;**Quantization & Deployment** | <code>▰▰▰▰▰▰▰▰▱▱</code> | **80%** |
+| 🗄 &nbsp;**SQL / Databases** | <code>▰▰▰▰▰▰▰▱▱▱</code> | **75%** |
 
 </div>
 
 <br/>
 
-## 💻 Tech Stack
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0A66C2,100:2AE86D&height=3" alt=""/>
 
-<div align="center">
-
-**Languages**
-<br/>
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-
-**AI / ML / DL**
-<br/>
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![HuggingFace](https://img.shields.io/badge/🤗%20Hugging%20Face-FFD21E?style=for-the-badge) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
-
-**Data & Numerical**
-<br/>
-![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![Scipy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=white)
-
-**Backend, Cloud & DevOps**
-<br/>
-![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white) ![Gunicorn](https://img.shields.io/badge/gunicorn-%298729.svg?style=for-the-badge&logo=gunicorn&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=%2300C7B7)
-
-**Tools**
-<br/>
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
-
-</div>
-
-<br/>
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--  ANALYTICS                                                              -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
 
 ## 📊 GitHub Analytics
 
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=lokeshe09&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github&bg_color=0d1117&title_color=2AE86D&icon_color=2AE86D&text_color=c9d1d9&border_color=2AE86D">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api?username=lokeshe09&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github&bg_color=ffffff&title_color=0A66C2&icon_color=2AE86D&text_color=24292f&border_color=0A66C2">
-  <img width="49%" src="https://github-readme-stats.shion.dev/api?username=lokeshe09&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github&bg_color=0d1117&title_color=2AE86D&icon_color=2AE86D&text_color=c9d1d9&border_color=2AE86D" alt="GitHub Stats"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=lokeshe09&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github&show_icons=true&bg_color=0d1117&title_color=2AE86D&icon_color=2AE86D&text_color=c9d1d9&ring_color=2AE86D">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api?username=lokeshe09&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github&show_icons=true&bg_color=ffffff&title_color=0A66C2&icon_color=2AE86D&text_color=24292f&ring_color=0A66C2">
+  <img width="49%" src="https://github-readme-stats.shion.dev/api?username=lokeshe09&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github&show_icons=true&bg_color=0d1117&title_color=2AE86D&icon_color=2AE86D&text_color=c9d1d9&ring_color=2AE86D" alt="GitHub Stats"/>
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&hide_border=true&layout=compact&langs_count=8&bg_color=0d1117&title_color=2AE86D&text_color=c9d1d9&border_color=2AE86D">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&hide_border=true&layout=compact&langs_count=8&bg_color=ffffff&title_color=0A66C2&text_color=24292f&border_color=0A66C2">
-  <img width="49%" src="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&hide_border=true&layout=compact&langs_count=8&bg_color=0d1117&title_color=2AE86D&text_color=c9d1d9&border_color=2AE86D" alt="Top Languages"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&hide_border=true&layout=compact&langs_count=8&bg_color=0d1117&title_color=2AE86D&text_color=c9d1d9">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&hide_border=true&layout=compact&langs_count=8&bg_color=ffffff&title_color=0A66C2&text_color=24292f">
+  <img width="49%" src="https://github-readme-stats.shion.dev/api/top-langs/?username=lokeshe09&hide_border=true&layout=compact&langs_count=8&bg_color=0d1117&title_color=2AE86D&text_color=c9d1d9" alt="Top Languages"/>
 </picture>
+
+<br/><br/>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=lokeshe09&hide_border=true&background=0D1117&ring=2AE86D&fire=FFD21E&currStreakNum=FFFFFF&sideNums=c9d1d9&currStreakLabel=2AE86D&sideLabels=c9d1d9&dates=8b949e">
@@ -145,16 +235,52 @@ Scalable Inference Infra
   <img width="100%" src="https://streak-stats.demolab.com/?user=lokeshe09&hide_border=true&background=0D1117&ring=2AE86D&fire=FFD21E&currStreakNum=FFFFFF&sideNums=c9d1d9&currStreakLabel=2AE86D&sideLabels=c9d1d9&dates=8b949e" alt="GitHub Streak"/>
 </picture>
 
+<br/><br/>
+
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&hide_border=true&bg_color=0d1117&color=c9d1d9&line=2AE86D&point=FFD21E&area=true&area_color=2AE86D&title_color=2AE86D">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&hide_border=true&bg_color=ffffff&color=24292f&line=0A66C2&point=FFD21E&area=true&area_color=0A66C2&title_color=0A66C2">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&hide_border=true&bg_color=0d1117&color=c9d1d9&line=2AE86D&point=FFD21E&area=true&area_color=2AE86D&title_color=2AE86D" alt="Activity Graph"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&hide_border=true&bg_color=0d1117&color=c9d1d9&line=2AE86D&point=FFD21E&area=true&area_color=2AE86D&title_color=2AE86D&radius=12">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&hide_border=true&bg_color=ffffff&color=24292f&line=0A66C2&point=FFD21E&area=true&area_color=0A66C2&title_color=0A66C2&radius=12">
+  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=lokeshe09&hide_border=true&bg_color=0d1117&color=c9d1d9&line=2AE86D&point=FFD21E&area=true&area_color=2AE86D&title_color=2AE86D&radius=12" alt="Contribution Activity Graph"/>
+</picture>
+
+<br/><br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/github-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/github-snake.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/output/github-snake-dark.svg" alt="Contribution snake animation"/>
 </picture>
 
 </div>
 
 <br/>
 
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0A66C2,100:2AE86D&height=3" alt=""/>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--  CONNECT                                                                -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+## 🤝 Let's Build Something
+
 <div align="center">
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:0A66C2,100:2AE86D&amp;height=100&amp;section=footer"/>
+
+<sub>Open to collaborations on open-source LLM / VLM fine-tuning, quantization and agentic systems.<br/>If you're shipping something ambitious at the edge of what's possible — let's talk.</sub>
+
+<br/><br/>
+
+<a href="mailto:lokeshe0912@gmail.com"><img src="https://img.shields.io/badge/📬_Say_Hello-lokeshe0912%40gmail.com-2AE86D?style=for-the-badge&labelColor=0d1117" alt="Email"/></a>&nbsp;
+<a href="https://www.linkedin.com/in/lokesh-e-60a583201" target="_blank"><img src="https://img.shields.io/badge/💼_Connect-LinkedIn-0A66C2?style=for-the-badge&labelColor=0d1117" alt="LinkedIn"/></a>&nbsp;
+<a href="https://huggingface.co/lokeshe09" target="_blank"><img src="https://img.shields.io/badge/🤗_Models-Hugging_Face-FFD21E?style=for-the-badge&labelColor=0d1117" alt="Hugging Face"/></a>
+
+<br/><br/>
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark&border=true&quote=Every%20model%20I%20ship%20is%20a%20step%20closer%20to%20AI%20that%20actually%20understands%20context.&author=Lokesh%20E" alt="Quote"/>
+
+<br/><br/>
+
+<sub>⭐ &nbsp;Thanks for stopping by — if something here resonates, a star goes a long way.</sub>
+
 </div>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:2AE86D,55:1FB592,100:0A66C2&height=120&section=footer" alt=""/>
