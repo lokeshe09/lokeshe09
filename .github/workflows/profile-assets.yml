@@ -38,19 +38,27 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
         run: python tools/stats.py dist lokeshe09
 
+      - name: Build 3D contribution calendar from live data
+        id: contrib3d
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+        run: python tools/contrib3d.py dist lokeshe09
+
       - name: Keep the committed cards if a live build failed
         run: |
           mkdir -p dist
-          [ -f dist/streak-dark.svg ] || { cp assets/streak-dark.svg assets/streak-light.svg dist/; echo "::warning::Streak build failed - kept committed card. Add a GH_PAT secret (read:user) if this persists."; }
-          [ -f dist/stats-dark.svg ]  || { cp assets/stats-dark.svg  assets/stats-light.svg  dist/; echo "::warning::Stats build failed - kept committed card."; }
+          [ -f dist/streak-dark.svg ]    || { cp assets/streak-dark.svg    assets/streak-light.svg    dist/; echo "::warning::Streak build failed - kept committed card. Add a GH_PAT secret (read:user) if this persists."; }
+          [ -f dist/stats-dark.svg ]     || { cp assets/stats-dark.svg     assets/stats-light.svg     dist/; echo "::warning::Stats build failed - kept committed card."; }
+          [ -f dist/contrib3d-dark.svg ] || { cp assets/contrib3d-dark.svg assets/contrib3d-light.svg dist/; echo "::warning::3D calendar build failed - kept committed card."; }
           ls -la dist
 
       - name: Commit refreshed live cards to main (so the README never 404s)
         run: |
-          cp dist/stats-dark.svg dist/stats-light.svg dist/streak-dark.svg dist/streak-light.svg assets/
+          cp dist/stats-*.svg dist/streak-*.svg dist/contrib3d-*.svg assets/
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats-*.svg assets/streak-*.svg
+          git add assets/stats-*.svg assets/streak-*.svg assets/contrib3d-*.svg
           git diff --cached --quiet || { git commit -m "chore: refresh live profile cards [skip ci]"; git push; }
 
       - name: Generate contribution snake

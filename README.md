@@ -228,6 +228,14 @@
 </picture>
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/contrib3d-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/contrib3d-light.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/contrib3d-dark.svg" alt="3D isometric contribution calendar — the last 52 weeks, one block per day, height by contributions"/>
+</picture>
+
+<br/>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stats-light.svg">
   <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/stats-dark.svg" alt="GitHub analytics — commits, contributions, active days, public repos, pull requests, languages, and a language share bar"/>

@@ -11,7 +11,7 @@ import sys
 import urllib.request
 from datetime import datetime
 
-from svgkit import BOLD, SEMI, MED, REG, MONO, MONOB, T, THEMES, svg, write, card, fmt_int
+from svgkit import BOLD, SEMI, MED, REG, MONO, MONOB, T, THEMES, svg, write, glass_card, glass_tile, fmt_int
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), "..", "assets")
 LOGIN = sys.argv[2] if len(sys.argv) > 2 else "lokeshe09"
@@ -86,7 +86,8 @@ SERIES = {
 def render(theme):
     t = THEMES[theme]
     W, H = 1200, 420
-    b = [card(t, W, H, 24)]
+    gdefs, gbody = glass_card(t, W, H, 24, uid="st", intensity=0.35)
+    b = [gbody]
     b.append(f'<circle cx="46" cy="42" r="4" fill="{t["accent"]}"/>')
     b.append(T(MONO, "GITHUB ANALYTICS", 60, 46.5, 12, t["ink2"], tracking=0.16))
     b.append(T(MONO, f"UPDATED {today.strftime('%Y-%m-%d')} UTC · ALL-TIME · PUBLIC + PRIVATE ACTIVITY", W - 40, 46.5, 11, t["ink3"], anchor="end", tracking=0.1))
@@ -149,7 +150,7 @@ def render(theme):
     b.append(f'<rect x="40" y="{H-54}" width="{W-80}" height="1" fill="{t["grid"]}"/>')
     b.append(T(REG, "Commits and contributions include private activity. Repos and languages count own, non-fork public repositories.", 40, H - 27, 12.5, t["ink2"]))
     b.append(T(MONO, f"{fmt_int(repos)} REPOS SCANNED", W - 40, H - 27, 11.5, t["ink3"], anchor="end", tracking=0.06))
-    write("stats", theme, svg(W, H, "".join(b)), OUT)
+    write("stats", theme, svg(W, H, "".join(b), gdefs), OUT)
 
 
 for th in THEMES:

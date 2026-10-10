@@ -12,7 +12,7 @@ import sys
 import urllib.request
 from datetime import date, datetime, timedelta
 
-from svgkit import BOLD, SEMI, MED, REG, MONO, MONOB, T, THEMES, svg, write, card, fmt_int
+from svgkit import BOLD, SEMI, MED, REG, MONO, MONOB, T, THEMES, svg, write, glass_card, glass_tile, fmt_int
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), "..", "assets")
 LOGIN = sys.argv[2] if len(sys.argv) > 2 else "lokeshe09"
@@ -113,7 +113,8 @@ def render(theme):
             f'<stop offset="1" stop-color="{t["accent"]}" stop-opacity="0"/></linearGradient>'
             f'<linearGradient id="rg" x1="0" y1="0" x2="1" y2="1">'
             f'<stop offset="0" stop-color="{t["accent"]}"/><stop offset="1" stop-color="{t["accent2"]}"/></linearGradient>')
-    b = [card(t, W, H, 24)]
+    gdefs, gbody = glass_card(t, W, H, 24, uid="sk", intensity=0.35)
+    b = [gbody]
 
     # header
     b.append(f'<circle cx="46" cy="42" r="4" fill="{t["accent"]}"><animate attributeName="opacity" values="1;0.3;1" dur="2.2s" repeatCount="indefinite"/></circle>')
@@ -195,7 +196,7 @@ def render(theme):
              f'<circle cx="{px:.1f}" cy="{py:.1f}" r="3.5" fill="{t["ink3"]}"/>'
              + T(MONOB, str(peak_week[1]), px, py - 9, 11, t["ink"], anchor=anchor) + "</g>")
 
-    write("streak", theme, svg(W, H, "".join(b), defs), OUT)
+    write("streak", theme, svg(W, H, "".join(b), gdefs + defs), OUT)
 
 
 for th in THEMES:

@@ -1,36 +1,36 @@
 # Asset generator
 
-All visuals in `/assets` are generated — never hand-edit the SVGs.
+Every visual in `/assets` is generated — never hand-edit the SVGs.
+
+| Script | Produces | Data |
+| --- | --- | --- |
+| `generate_assets.py` | hero, section headers, terminal, profile card, expertise cards, skill chart, stack labels/chips, buttons, footer | static copy in the script |
+| `stats.py` | `stats-*.svg` — KPI row + language share bar | GitHub GraphQL (live) |
+| `streak.py` | `streak-*.svg` — total / current / longest streak + 26-week sparkline | GitHub GraphQL (live) |
+| `contrib3d.py` | `contrib3d-*.svg` — isometric 3D calendar of the last 52 weeks | GitHub GraphQL (live) |
+
+Shared pieces live in `svgkit.py` (fonts → vector paths, theme tokens, the
+frosted-glass card with drifting aurora orbs, isometric prism helpers) and
+`ghdata.py` (GraphQL + contribution calendar).
 
 ```powershell
 pip install fonttools
-# fonts dir must contain: Inter-{Bold,SemiBold,Medium,Regular}.ttf, JetBrainsMono-{Medium,Bold}.ttf
-#   Inter          → https://github.com/rsms/inter/releases
-#   JetBrains Mono → https://github.com/JetBrains/JetBrainsMono/releases
-python tools/generate_assets.py <fonts-dir> assets
+python tools/generate_assets.py tools/fonts assets
+$env:GITHUB_TOKEN = (gh auth token)
+python tools/stats.py assets lokeshe09
+python tools/streak.py assets lokeshe09
+python tools/contrib3d.py assets lokeshe09
 ```
 
-Text is converted to vector paths, so rendering is identical on every OS.
-Each asset is emitted as `*-dark.svg` and `*-light.svg`; the README switches
-between them with `<picture>` + `prefers-color-scheme`.
+Text is converted to paths with Inter + JetBrains Mono (`tools/fonts/`, OFL),
+so rendering is identical on every OS. Each asset is emitted as `*-dark.svg`
+and `*-light.svg`; the README switches between them with `<picture>` +
+`prefers-color-scheme`.
 
-Edit copy, colors (`THEMES`), skills (`SKILLS`) or cards (`CARDS`) in the
-script, re-run, commit.
+`.github/workflows/profile-assets.yml` rebuilds the three live cards daily
+(and on every push), commits them back to `assets/` with `[skip ci]`, and
+publishes the contribution snake to the `output` branch. If a live build
+fails it keeps the committed card, so the README never shows a broken image.
 
-## Live cards (streak + analytics)
-
-`tools/stats.py` renders the analytics panel (commits, contributions, active days,
-repos, PRs, languages + language-share bar). `tools/streak.py` pulls the full contribution calendar from the GitHub GraphQL
-API and renders `streak-dark.svg` / `streak-light.svg` — total contributions,
-current streak (ring = % of personal record), longest streak, and a 26-week
-sparkline. `.github/workflows/profile-assets.yml` runs it daily (and on every
-push) and publishes to the `output` branch alongside the snake; the README
-reads from there. The copy in `assets/` is only a fallback if the live build fails.
-
-```powershell
-$env:GITHUB_TOKEN = (gh auth token); python tools/streak.py assets lokeshe09
-```
-
-```powershell
-$env:GITHUB_TOKEN = (gh auth token); python tools/stats.py assets lokeshe09
-```
+Edit copy, colours (`THEMES` / `GLASS`), skills (`SKILLS`) or cards (`CARDS`)
+in the scripts, re-run, commit.

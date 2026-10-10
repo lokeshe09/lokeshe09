@@ -117,3 +117,98 @@ def dotgrid(t, id_="dg"):
 
 def fmt_int(n):
     return f"{n:,}"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Glass + 3D primitives (v2 design language)
+# ──────────────────────────────────────────────────────────────────────────────
+GLASS = {
+    "dark": dict(fill="rgba(255,255,255,0.035)", tile="rgba(255,255,255,0.06)", edgeHi="rgba(255,255,255,0.42)",
+                 edgeLo="rgba(255,255,255,0.07)", hi="rgba(255,255,255,0.75)", orbOp="0.58",
+                 extrude="#0B3B22", extrudeEdge="#19B058", shine="rgba(255,255,255,0.55)"),
+    "light": dict(fill="rgba(255,255,255,0.58)", tile="rgba(255,255,255,0.72)", edgeHi="rgba(15,23,42,0.22)",
+                  edgeLo="rgba(15,23,42,0.05)", hi="rgba(255,255,255,1)", orbOp="0.62",
+                  extrude="#A7F3C6", extrudeEdge="#86EFAC", shine="rgba(255,255,255,0.9)"),
+}
+for _k, _v in GLASS.items():
+    THEMES[_k].update({f"g_{kk}": vv for kk, vv in _v.items()})
+
+
+def default_orbs(t, w, h):
+    r = min(w, h)
+    return [
+        (t["glowA"], w * 0.08, h * 0.95, r * 0.42, 60, -30, 16),
+        (t["glowB"], w * 0.92, h * 0.05, r * 0.5, -70, 40, 21),
+        (t["glowC"], w * 0.55, h * 1.1, r * 0.34, 40, -30, 18),
+    ]
+
+
+def glass_card(t, w, h, rx=24, orbs=None, uid="g", grid=True, blur=48, intensity=1.0):
+    """A frosted-glass card with its own drifting aurora orbs behind the glass.
+
+    Returns (defs, body). Put defs inside <defs>, body first in the drawing.
+    """
+    orbs = default_orbs(t, w, h) if orbs is None else orbs
+    orb_op = f"{float(t['g_orbOp']) * intensity:.2f}"
+    d = [
+        f'<clipPath id="{uid}-clip"><rect x="0" y="0" width="{w}" height="{h}" rx="{rx}"/></clipPath>',
+        f'<filter id="{uid}-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="{blur}"/></filter>',
+        f'<linearGradient id="{uid}-bd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{t["g_edgeHi"]}"/>'
+        f'<stop offset="0.45" stop-color="{t["g_edgeLo"]}"/><stop offset="1" stop-color="{t["g_edgeHi"]}"/></linearGradient>',
+        f'<linearGradient id="{uid}-hl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{t["g_hi"]}" stop-opacity="0"/>'
+        f'<stop offset="0.5" stop-color="{t["g_hi"]}"/><stop offset="1" stop-color="{t["g_hi"]}" stop-opacity="0"/></linearGradient>',
+        dotgrid(t, f"{uid}-dg"),
+    ]
+    b = [f'<rect x="0.5" y="0.5" width="{w-1}" height="{h-1}" rx="{rx}" fill="{t["panel"]}"/>',
+         f'<g clip-path="url(#{uid}-clip)">']
+    for col, cx, cy, r, dx, dy, dur in orbs:
+        b.append(
+            f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="{r:.0f}" fill="{col}" opacity="{orb_op}" filter="url(#{uid}-blur)">'
+            f'<animate attributeName="cx" values="{cx:.0f};{cx+dx:.0f};{cx:.0f}" dur="{dur}s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>'
+            f'<animate attributeName="cy" values="{cy:.0f};{cy+dy:.0f};{cy:.0f}" dur="{dur}s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>'
+            f'</circle>'
+        )
+    if grid:
+        b.append(f'<rect width="{w}" height="{h}" fill="url(#{uid}-dg)"/>')
+    b.append(f'<rect width="{w}" height="{h}" fill="{t["g_fill"]}"/>')
+    b.append("</g>")
+    b.append(f'<rect x="0.5" y="0.5" width="{w-1}" height="{h-1}" rx="{rx}" fill="none" stroke="url(#{uid}-bd)"/>')
+    b.append(f'<rect x="{rx}" y="1" width="{w-2*rx}" height="1" fill="url(#{uid}-hl)"/>')
+    return "".join(d), "".join(b)
+
+
+def glass_tile(t, x, y, w, h, rx, uid):
+    """A smaller frosted tile that sits on top of a glass card (uses the card's gradients)."""
+    return (f'<rect x="{x+0.5:.1f}" y="{y+0.5:.1f}" width="{w-1:.1f}" height="{h-1:.1f}" rx="{rx}" fill="{t["g_tile"]}" stroke="url(#{uid}-bd)"/>'
+            f'<rect x="{x+rx:.1f}" y="{y+1:.1f}" width="{w-2*rx:.1f}" height="1" fill="url(#{uid}-hl)" opacity="0.7"/>')
+
+
+ISO_C, ISO_S = 0.8660254, 0.5
+
+
+def iso(x, y, z=0.0):
+    return (x - y) * ISO_C, (x + y) * ISO_S - z
+
+
+def iso_prism(ox, oy, x, y, w, d, h, top, left, right, opacity=1.0, stroke=None, extra=""):
+    """An isometric box with its base corner at grid (x, y), footprint w×d, height h."""
+    def P(px, py, pz):
+        ix, iy = iso(px, py, pz)
+        return f"{ox+ix:.1f},{oy+iy:.1f}"
+    A, B, C, D = P(x, y, h), P(x + w, y, h), P(x + w, y + d, h), P(x, y + d, h)
+    B0, C0, D0 = P(x + w, y, 0), P(x + w, y + d, 0), P(x, y + d, 0)
+    st = f' stroke="{stroke}" stroke-width="0.8" stroke-linejoin="round"' if stroke else ""
+    op = f' opacity="{opacity}"' if opacity != 1.0 else ""
+    return (f'<g{op}{extra}>'
+            f'<polygon points="{D} {C} {C0} {D0}" fill="{left}"{st}/>'
+            f'<polygon points="{B} {C} {C0} {B0}" fill="{right}"{st}/>'
+            f'<polygon points="{A} {B} {C} {D}" fill="{top}"{st}/>'
+            f'</g>')
+
+
+def shade(hexcol, k):
+    """Darken (k<1) or lighten (k>1) a hex colour."""
+    hexcol = hexcol.lstrip("#")
+    r, g, b = (int(hexcol[i:i+2], 16) for i in (0, 2, 4))
+    f = lambda v: max(0, min(255, int(round(v * k if k <= 1 else v + (255 - v) * (k - 1)))))
+    return f"#{f(r):02X}{f(g):02X}{f(b):02X}"
