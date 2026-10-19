@@ -244,3 +244,9 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/footer-light.svg">
   <img width="100%" src="https://raw.githubusercontent.com/lokeshe09/lokeshe09/main/assets/footer-dark.svg" title="Lokesh E · hand-built in SVG" alt="Lokesh E — Generative AI Engineer · designed and hand-built in SVG · 2026"/>
 </picture>
+
+## Projects
+
+<!-- personal-agent:projects:start -->
+- **[AI Resume Screening Assistant](https://github.com/lokeshe09/ai-resume-screening-assistant)** — An AI-powered resume screening tool that ranks candidates against job descriptions using semantic search, LLM-based analysis, and skill extraction with Python, FastAPI, and Streamlit. <!-- pa:lokeshe09-ai-resume-screening-assistant -->
+<!-- personal-agent:projects:end -->
